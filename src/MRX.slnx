@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/MRX.Core/">
+    <Project Path="MRX.Core/src/MRX.Core.csproj" />
+  </Folder>
+</Solution>

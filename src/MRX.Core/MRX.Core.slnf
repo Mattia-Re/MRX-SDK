@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "../MRX.slnx",
+    "projects": [
+      "MRX.Core/src/MRX.Core.csproj"
+    ]
+  }
+}
