@@ -10,11 +10,11 @@ using MRX.Core.ModelBinding.Attributes;
 namespace MRX.Core.ModelBinding.Validation;
 
 /// <summary>
-/// Provides a validation visitor that does not perform top-level model validation.
+///     Provides a validation visitor that does not perform top-level model validation.
 /// </summary>
 /// <remarks>
-/// The returned validation visitor, will cause the <see cref="RequiredAttribute"/> error message not to be
-/// added to the ModelState.
+///     The returned validation visitor, will cause the <see cref="RequiredAttribute" /> error message not to be
+///     added to the ModelState.
 /// </remarks>
 internal class MrxObjectModelValidator(
     IModelMetadataProvider modelMetadataProvider,
@@ -24,9 +24,9 @@ internal class MrxObjectModelValidator(
 {
     private const string SeenKeysKey = "Mrx.ValidationFormatter.SeenKeys";
     private const string ValidatedParametersCounterKey = "Mrx.ValidationFormatter.ParameterCounter";
+    private readonly ModelBindingOptions _bindingOptions = bindingOptions.Value;
 
     private readonly MvcOptions _mvcOptions = mvcOptions.Value;
-    private readonly ModelBindingOptions _bindingOptions = bindingOptions.Value;
 
     public override void Validate(ActionContext actionContext, ValidationStateDictionary? validationState,
         string? prefix, object? model,

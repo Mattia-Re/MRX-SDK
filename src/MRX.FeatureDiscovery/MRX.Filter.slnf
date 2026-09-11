@@ -1,0 +1,9 @@
+﻿{
+  "solution": {
+    "path": "..\\MRX.slnx",
+    "projects": [
+      "MRX.FeatureDiscovery\\src\\MRX.FeatureDiscovery.csproj",
+      "MRX.FeatureDiscovery.Common\\src\\MRX.FeatureDiscovery.Common.csproj"
+    ]
+  }
+}

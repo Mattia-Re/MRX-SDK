@@ -2,7 +2,8 @@
   "solution": {
     "path": "../MRX.slnx",
     "projects": [
-      "MRX.Core/src/MRX.Core.csproj"
+      "MRX.Core/src/MRX.Core.csproj",
+      "MRX.Core.Common/src/MRX.Core.Common"
     ]
   }
 }

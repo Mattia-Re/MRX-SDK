@@ -1,6 +1,6 @@
 using MRX.Core.ModelBinding;
 
-namespace MRX.Core;
+namespace MRX.Core.Configuration;
 
 public class MrxConfigurationOptions
 {

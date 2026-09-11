@@ -1,5 +1,11 @@
 <Solution>
+  <Folder Name="/src/MRX.FeatureDiscovery/">
+    <Project Path="MRX.FeatureDiscovery.Common/src/MRX.FeatureDiscovery.Common.csproj" />
+    <Project Path="MRX.FeatureDiscovery/src/MRX.FeatureDiscovery.csproj" />
+  </Folder>
+  <Folder Name="/src/" />
   <Folder Name="/src/MRX.Core/">
+    <Project Path="MRX.Core.Common/src/MRX.Core.Common.csproj" />
     <Project Path="MRX.Core/src/MRX.Core.csproj" />
   </Folder>
 </Solution>
