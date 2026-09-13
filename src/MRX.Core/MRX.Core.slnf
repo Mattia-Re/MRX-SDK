@@ -3,7 +3,9 @@
     "path": "../MRX.slnx",
     "projects": [
       "MRX.Core/src/MRX.Core.csproj",
-      "MRX.Core.Common/src/MRX.Core.Common"
+      "MRX.Core.Common/src/MRX.Core.Common.csproj",
+      "MRX.Core/test/MRX.Core.TestHost/MRX.Core.TestHost.csproj",
+      "MRX.Core/test/MRX.Core.Tests/MRX.Core.Tests.csproj"
     ]
   }
 }

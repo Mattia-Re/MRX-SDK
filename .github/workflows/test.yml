@@ -1,0 +1,33 @@
+name: Run .NET Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+defaults:
+  run:
+    working-directory: ./src
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore MRX.slnx
+
+    - name: Build
+      run: dotnet build MRX.slnx --no-restore -c Release
+
+    - name: Run tests
+      run: dotnet test MRX.slnx --no-build -c Release --verbosity normal
