@@ -10,10 +10,10 @@ public static class ServiceCollectionExtensions
         public IServiceCollection AddMrx()
         {
             services.AddMrxModelBindingValidation();
-            
+
             return services;
         }
-        
+
         public IServiceCollection AddMrxModelBindingValidation()
         {
             return services.AddMrxModelBindingValidation(_ => { });
@@ -23,6 +23,9 @@ public static class ServiceCollectionExtensions
         {
             MrxConfigurationOptions options = new();
             configureOptions(options);
+
+            // Add required services
+            services.AddControllers();
 
             // Setup options
             services.Configure(configureOptions);

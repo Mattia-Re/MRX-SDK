@@ -6,6 +6,8 @@
   <Folder Name="/src/" />
   <Folder Name="/src/MRX.Core/">
     <Project Path="MRX.Core.Common/src/MRX.Core.Common.csproj" />
+    <Project Path="MRX.Core/test/MRX.Core.TestHost/MRX.Core.TestHost.csproj"/>
+    <Project Path="MRX.Core/test/MRX.Core.Tests/MRX.Core.Tests.csproj"/>
     <Project Path="MRX.Core/src/MRX.Core.csproj" />
   </Folder>
 </Solution>

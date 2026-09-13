@@ -14,4 +14,8 @@
       <ProjectReference Include="..\..\MRX.Core.Common\src\MRX.Core.Common.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="MRX.Core.Tests"/>
+    </ItemGroup>
+
 </Project>
