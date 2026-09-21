@@ -1,31 +1,44 @@
 <Solution>
-  <Folder Name="/src/MRX.FeatureDiscovery/">
-    <Project Path="MRX.FeatureDiscovery.Common/src/MRX.FeatureDiscovery.Common.csproj" />
-    <Project Path="MRX.FeatureDiscovery/src/MRX.FeatureDiscovery.csproj" />
-      <Project Path="MRX.FeatureDiscovery/test/MRX.FeatureDiscovery.Tests/MRX.FeatureDiscovery.Tests.csproj"/>
-  </Folder>
+    <Folder Name="/src/MRX.FeatureDiscovery/">
+        <Project Path="MRX.FeatureDiscovery.Common/src/MRX.FeatureDiscovery.Common.csproj"/>
+        <Project Path="MRX.FeatureDiscovery/src/MRX.FeatureDiscovery.csproj"/>
+    </Folder>
+    <Folder Name="/test/MRX.FeatureDiscovery/">
+        <Project Path="MRX.FeatureDiscovery/test/MRX.FeatureDiscovery.Tests/MRX.FeatureDiscovery.Tests.csproj"/>
+    </Folder>
+
     <Folder Name="/src/MRX.UI.ErrorsAutoWiring/">
         <Project Path="MRX.UI.ErrorsAutoWiring/src/MRX.UI.ErrorsAutoWiring.csproj"/>
+    </Folder>
+    <Folder Name="/test/MRX.UI.ErrorsAutoWiring/">
         <Project
                 Path="MRX.UI.ErrorsAutoWiring/test/MRX.UI.ErrorsAutoWiring.Tests/MRX.UI.ErrorsAutoWiring.Tests.csproj"/>
     </Folder>
+
     <Folder Name="/src/MRX.Json/">
         <Project Path="MRX.Json.Reflection/MRX.Json.Reflection.csproj"/>
         <Project Path="MRX.Json/src/MRX.Json/MRX.Json.csproj"/>
+    </Folder>
+    <Folder Name="/test/MRX.Json/">
         <Project Path="MRX.Json/test/MRX.Json.Reflection.Tests/MRX.Json.Reflection.Tests.csproj"/>
         <Project Path="MRX.Json/test/MRX.Json.Tests/MRX.Json.Tests.csproj"/>
     </Folder>
+
     <Folder Name="/src/MRX.Parsing/">
         <Project Path="MRX.Parsing/src/MRX.Parsing.Reflection/MRX.Parsing.Reflection.csproj"/>
         <Project Path="MRX.Parsing/src/MRX.Parsing/MRX.Parsing.csproj"/>
-        <Project Path="MRX.Parsing/test/MRX.Parsing.Reflection.Tests/MRX.Parsing.Reflection.Tests.csproj"/>
+    </Folder>
+    <Folder Name="/test/MRX.Parsing/">
         <Project Path="MRX.Parsing/test/MRX.Parsing.Tests/MRX.Parsing.Tests.csproj"/>
-  </Folder>
-  <Folder Name="/src/" />
-  <Folder Name="/src/MRX.Core/">
-    <Project Path="MRX.Core.Common/src/MRX.Core.Common.csproj" />
-      <Project Path="MRX.Core/test/MRX.Core.TestHost/MRX.Core.TestHost.csproj"/>
-      <Project Path="MRX.Core/test/MRX.Core.Tests/MRX.Core.Tests.csproj"/>
-    <Project Path="MRX.Core/src/MRX.Core.csproj" />
-  </Folder>
+        <Project Path="MRX.Parsing/test/MRX.Parsing.Reflection.Tests/MRX.Parsing.Reflection.Tests.csproj"/>
+    </Folder>
+
+    <Folder Name="/src/MRX.Core/">
+        <Project Path="MRX.Core.Common/src/MRX.Core.Common.csproj"/>
+        <Project Path="MRX.Core/src/MRX.Core.csproj"/>
+    </Folder>
+    <Folder Name="/test/MRX.Core/">
+        <Project Path="MRX.Core/test/MRX.Core.TestHost/MRX.Core.TestHost.csproj"/>
+        <Project Path="MRX.Core/test/MRX.Core.Tests/MRX.Core.Tests.csproj"/>
+    </Folder>
 </Solution>
