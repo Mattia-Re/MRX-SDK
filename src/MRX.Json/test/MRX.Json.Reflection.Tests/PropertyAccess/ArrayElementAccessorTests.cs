@@ -1,8 +1,8 @@
 using System.Collections;
 using MRX.Json.Path;
-using MRX.UI.ErrorsAutoWiring.PropertyAccess;
+using MRX.Json.Reflection.PropertyAccess;
 
-namespace MRX.UI.ErrorsAutoWiring.Tests.PropertyAccess;
+namespace MRX.Json.Reflection.Tests.PropertyAccess;
 
 file sealed class PlainEnumerableContainer(object[] items) : IEnumerable
 {

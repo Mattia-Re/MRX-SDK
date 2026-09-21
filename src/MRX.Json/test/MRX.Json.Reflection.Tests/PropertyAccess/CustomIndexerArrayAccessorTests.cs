@@ -1,9 +1,9 @@
 using Moq;
 using MRX.Json.Path;
-using MRX.UI.ErrorsAutoWiring.Abstractions;
-using MRX.UI.ErrorsAutoWiring.PropertyAccess;
+using MRX.Json.Reflection.PropertyAccess;
+using MRX.Parsing.Reflection.Abstractions;
 
-namespace MRX.UI.ErrorsAutoWiring.Tests.PropertyAccess;
+namespace MRX.Json.Reflection.Tests.PropertyAccess;
 
 file sealed class NumericIndexerContainer(Dictionary<int, string> values)
 {
@@ -31,8 +31,8 @@ public class CustomIndexerArrayAccessorTests
     public void CanHandle_ReturnsTrue_WhenTokenTypeIsArrayIndex()
     {
         // Arrange
-        Mock<INumericTokenParser> numericParserMock = new();
-        CustomIndexerArrayAccessor accessor = new(numericParserMock.Object);
+        Mock<INumericParser> numericParserMock = new();
+        CustomIndexerArrayAccessor accessor = new((INumericParser)numericParserMock.Object);
         NumericIndexerContainer container = new(new Dictionary<int, string>());
 
         // Act
@@ -46,8 +46,8 @@ public class CustomIndexerArrayAccessorTests
     public void CanHandle_ReturnsFalse_WhenTokenTypeIsNotArrayIndex()
     {
         // Arrange
-        Mock<INumericTokenParser> numericParserMock = new();
-        CustomIndexerArrayAccessor accessor = new(numericParserMock.Object);
+        Mock<INumericParser> numericParserMock = new();
+        CustomIndexerArrayAccessor accessor = new((INumericParser)numericParserMock.Object);
         NumericIndexerContainer container = new(new Dictionary<int, string>());
 
         // Act
@@ -61,11 +61,11 @@ public class CustomIndexerArrayAccessorTests
     public void GetValue_ReturnsIndexerValue_WhenIndexerExists()
     {
         // Arrange
-        Mock<INumericTokenParser> numericParserMock = new();
+        Mock<INumericParser> numericParserMock = new();
         numericParserMock
             .Setup(parser => parser.Parse(typeof(int), "1"))
             .Returns(1);
-        CustomIndexerArrayAccessor accessor = new(numericParserMock.Object);
+        CustomIndexerArrayAccessor accessor = new((INumericParser)numericParserMock.Object);
         NumericIndexerContainer container = new(new Dictionary<int, string> { [1] = "found" });
 
         // Act
@@ -80,11 +80,11 @@ public class CustomIndexerArrayAccessorTests
     public void GetValue_ReturnsNull_WhenIndexerThrowsIndexOutOfRangeException()
     {
         // Arrange
-        Mock<INumericTokenParser> numericParserMock = new();
+        Mock<INumericParser> numericParserMock = new();
         numericParserMock
             .Setup(parser => parser.Parse(typeof(int), "99"))
             .Returns(99);
-        CustomIndexerArrayAccessor accessor = new(numericParserMock.Object);
+        CustomIndexerArrayAccessor accessor = new((INumericParser)numericParserMock.Object);
         NumericIndexerContainer container = new(new Dictionary<int, string>());
 
         // Act
@@ -98,8 +98,8 @@ public class CustomIndexerArrayAccessorTests
     public void GetValue_Throws_WhenContainerHasNoNumericIndexer()
     {
         // Arrange
-        Mock<INumericTokenParser> numericParserMock = new();
-        CustomIndexerArrayAccessor accessor = new(numericParserMock.Object);
+        Mock<INumericParser> numericParserMock = new();
+        CustomIndexerArrayAccessor accessor = new((INumericParser)numericParserMock.Object);
         NoIndexerContainer container = new();
 
         // Act

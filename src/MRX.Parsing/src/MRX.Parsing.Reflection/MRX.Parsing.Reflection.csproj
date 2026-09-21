@@ -7,13 +7,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <InternalsVisibleTo Include="MRX.Json.Tests"/>
-        <InternalsVisibleTo Include="MRX.Json.Reflection"/>
+        <ProjectReference Include="..\MRX.Parsing\MRX.Parsing.csproj"/>
+    </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="MRX.Parsing.Reflection.Tests"/>
+
+        <InternalsVisibleTo Include="MRX.Json.Reflection"/>
+        <InternalsVisibleTo Include="MRX.Json.Reflection.Tests"/>
         <InternalsVisibleTo Include="DynamicProxyGenAssembly2"/>
-        <InternalsVisibleTo Include="MRX.Core"/>
-        <InternalsVisibleTo Include="MRX.UI.ErrorsAutoWiring"/>
-        <InternalsVisibleTo Include="MRX.UI.ErrorsAutoWiring.Tests"/>
     </ItemGroup>
 
 </Project>

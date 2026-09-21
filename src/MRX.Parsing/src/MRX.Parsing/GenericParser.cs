@@ -1,4 +1,4 @@
-namespace MRX.Json.Parsing;
+namespace MRX.Parsing;
 
 internal static class GenericParser
 {

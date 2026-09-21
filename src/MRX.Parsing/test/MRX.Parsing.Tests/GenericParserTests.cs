@@ -1,6 +1,4 @@
-using MRX.Json.Parsing;
-
-namespace MRX.Json.Tests.Parsing;
+namespace MRX.Parsing.Tests;
 
 public class GenericParserTests
 {

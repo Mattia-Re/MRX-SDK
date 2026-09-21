@@ -1,8 +1,8 @@
 using MRX.Json.Path;
 
-namespace MRX.UI.ErrorsAutoWiring.Abstractions;
+namespace MRX.Json.Reflection.Abstractions;
 
-internal interface IModelPropertyAccessor
+internal interface IModelNodeAccessor
 {
     bool CanHandle(JsonPathTokenType tokenType, string token, object container);
     object? GetValue(string token, object container);

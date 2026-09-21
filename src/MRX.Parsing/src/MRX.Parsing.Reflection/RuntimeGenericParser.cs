@@ -1,16 +1,16 @@
 using System.Collections.Concurrent;
 using System.Reflection;
 
-namespace MRX.Json.Parsing;
+namespace MRX.Parsing.Reflection;
 
 internal static class RuntimeGenericParser
 {
     private static readonly ConcurrentDictionary<Type, MethodInfo> ParseMethodsCache = [];
 
-    internal static object Parse(Type numericType, string value, IFormatProvider? provider = null)
+    internal static object Parse(Type targetType, string value, IFormatProvider? provider = null)
     {
         MethodInfo parseMethod = ParseMethodsCache.GetOrAdd(
-            numericType,
+            targetType,
             t => typeof(GenericParser)
                 .GetMethod(nameof(GenericParser.ParseValue), BindingFlags.NonPublic | BindingFlags.Static)
                 !.MakeGenericMethod(t));

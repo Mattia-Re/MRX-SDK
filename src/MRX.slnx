@@ -10,8 +10,16 @@
                 Path="MRX.UI.ErrorsAutoWiring/test/MRX.UI.ErrorsAutoWiring.Tests/MRX.UI.ErrorsAutoWiring.Tests.csproj"/>
     </Folder>
     <Folder Name="/src/MRX.Json/">
+        <Project Path="MRX.Json.Reflection/MRX.Json.Reflection.csproj"/>
         <Project Path="MRX.Json/src/MRX.Json/MRX.Json.csproj"/>
+        <Project Path="MRX.Json/test/MRX.Json.Reflection.Tests/MRX.Json.Reflection.Tests.csproj"/>
         <Project Path="MRX.Json/test/MRX.Json.Tests/MRX.Json.Tests.csproj"/>
+    </Folder>
+    <Folder Name="/src/MRX.Parsing/">
+        <Project Path="MRX.Parsing/src/MRX.Parsing.Reflection/MRX.Parsing.Reflection.csproj"/>
+        <Project Path="MRX.Parsing/src/MRX.Parsing/MRX.Parsing.csproj"/>
+        <Project Path="MRX.Parsing/test/MRX.Parsing.Reflection.Tests/MRX.Parsing.Reflection.Tests.csproj"/>
+        <Project Path="MRX.Parsing/test/MRX.Parsing.Tests/MRX.Parsing.Tests.csproj"/>
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/MRX.Core/">

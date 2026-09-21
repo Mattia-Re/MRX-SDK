@@ -1,13 +1,14 @@
 using System.Numerics;
 using System.Reflection;
 using MRX.Json.Path;
-using MRX.UI.ErrorsAutoWiring.Abstractions;
+using MRX.Json.Reflection.Abstractions;
+using MRX.Parsing.Reflection.Abstractions;
 
-namespace MRX.UI.ErrorsAutoWiring.PropertyAccess;
+namespace MRX.Json.Reflection.PropertyAccess;
 
-internal class CustomIndexerArrayAccessor(INumericTokenParser numericParser) : IModelPropertyAccessor
+internal class CustomIndexerArrayAccessor(INumericParser numericParser) : IModelNodeAccessor
 {
-    private readonly INumericTokenParser _numericParser =
+    private readonly INumericParser _numericParser =
         numericParser ?? throw new ArgumentNullException(nameof(numericParser));
 
     public bool CanHandle(JsonPathTokenType tokenType, string token, object container)

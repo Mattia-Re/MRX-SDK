@@ -1,15 +1,15 @@
 using Moq;
 using MRX.Json.Path;
-using MRX.UI.ErrorsAutoWiring.Abstractions;
-using MRX.UI.ErrorsAutoWiring.PropertyAccess;
+using MRX.Json.Reflection.Abstractions;
+using MRX.Json.Reflection.PropertyAccess;
 
-namespace MRX.UI.ErrorsAutoWiring.Tests.PropertyAccess;
+namespace MRX.Json.Reflection.Tests.PropertyAccess;
 
 public class ModelPropertyAccessorProviderTests
 {
-    private static Mock<IModelPropertyAccessor> CreateAccessorMock(bool canHandle)
+    private static Mock<IModelNodeAccessor> CreateAccessorMock(bool canHandle)
     {
-        Mock<IModelPropertyAccessor> mock = new();
+        Mock<IModelNodeAccessor> mock = new();
         mock.Setup(a => a.CanHandle(
                 It.IsAny<JsonPathTokenType>(),
                 It.IsAny<string>(),
@@ -23,12 +23,12 @@ public class ModelPropertyAccessorProviderTests
     public void GetAccessor_ReturnsFirstMatchingAccessor()
     {
         // Arrange
-        Mock<IModelPropertyAccessor> noMatch = CreateAccessorMock(false);
-        Mock<IModelPropertyAccessor> match = CreateAccessorMock(true);
+        Mock<IModelNodeAccessor> noMatch = CreateAccessorMock(false);
+        Mock<IModelNodeAccessor> match = CreateAccessorMock(true);
         ModelPropertyAccessorProvider provider = new([noMatch.Object, match.Object]);
 
         // Act
-        IModelPropertyAccessor? result = provider.GetAccessor(JsonPathTokenType.ArrayIndex, "Foo", new object());
+        IModelNodeAccessor? result = provider.GetAccessor(JsonPathTokenType.ArrayIndex, "Foo", new object());
 
         // Assert
         Assert.Same(match.Object, result);
@@ -38,12 +38,12 @@ public class ModelPropertyAccessorProviderTests
     public void GetAccessor_StopsAtFirstMatch_IgnoresLaterMatches()
     {
         // Arrange
-        Mock<IModelPropertyAccessor> firstMatch = CreateAccessorMock(true);
-        Mock<IModelPropertyAccessor> secondMatch = CreateAccessorMock(true);
+        Mock<IModelNodeAccessor> firstMatch = CreateAccessorMock(true);
+        Mock<IModelNodeAccessor> secondMatch = CreateAccessorMock(true);
         ModelPropertyAccessorProvider provider = new([firstMatch.Object, secondMatch.Object]);
 
         // Act
-        IModelPropertyAccessor? result = provider.GetAccessor(JsonPathTokenType.Property, "Foo", new object());
+        IModelNodeAccessor? result = provider.GetAccessor(JsonPathTokenType.Property, "Foo", new object());
 
         // Assert
         Assert.Same(firstMatch.Object, result);
@@ -62,7 +62,7 @@ public class ModelPropertyAccessorProviderTests
         ]);
 
         // Act
-        IModelPropertyAccessor? result = provider.GetAccessor(JsonPathTokenType.Property, "Foo", new object());
+        IModelNodeAccessor? result = provider.GetAccessor(JsonPathTokenType.Property, "Foo", new object());
 
         // Assert
         Assert.Null(result);
@@ -75,7 +75,7 @@ public class ModelPropertyAccessorProviderTests
         ModelPropertyAccessorProvider provider = new([]);
 
         // Act
-        IModelPropertyAccessor? result = provider.GetAccessor(JsonPathTokenType.Property, "Foo", new object());
+        IModelNodeAccessor? result = provider.GetAccessor(JsonPathTokenType.Property, "Foo", new object());
 
         // Assert
         Assert.Null(result);
@@ -85,7 +85,7 @@ public class ModelPropertyAccessorProviderTests
     public void GetAccessor_PassesTokenTypeTokenAndContainer_ToEachAccessor()
     {
         // Arrange
-        Mock<IModelPropertyAccessor> accessorMock = CreateAccessorMock(true);
+        Mock<IModelNodeAccessor> accessorMock = CreateAccessorMock(true);
         ModelPropertyAccessorProvider provider = new([accessorMock.Object]);
         object container = new();
 

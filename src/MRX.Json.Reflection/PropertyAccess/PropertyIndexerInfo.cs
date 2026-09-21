@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace MRX.UI.ErrorsAutoWiring.PropertyAccess;
+namespace MRX.Json.Reflection.PropertyAccess;
 
 internal record PropertyIndexerInfo(
     PropertyInfo PropertyInfo,

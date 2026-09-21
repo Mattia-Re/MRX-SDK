@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Diagnostics;
 using MRX.Json.Path;
-using MRX.UI.ErrorsAutoWiring.Abstractions;
+using MRX.Json.Reflection.Abstractions;
 
-namespace MRX.UI.ErrorsAutoWiring.PropertyAccess;
+namespace MRX.Json.Reflection.PropertyAccess;
 
-internal class ArrayElementAccessor : IModelPropertyAccessor
+internal class ArrayElementAccessor : IModelNodeAccessor
 {
     public bool CanHandle(JsonPathTokenType tokenType, string token, object container)
     {
