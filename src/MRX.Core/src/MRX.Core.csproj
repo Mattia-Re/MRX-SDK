@@ -12,6 +12,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\MRX.Core.Common\src\MRX.Core.Common.csproj" />
+        <ProjectReference Include="..\..\MRX.Json\src\MRX.Json\MRX.Json.csproj"/>
     </ItemGroup>
 
     <ItemGroup>

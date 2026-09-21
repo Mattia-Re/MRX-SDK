@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Primitives;
 using MRX.Core.ModelBinding.Attributes;
+using JsonPathMatching = MRX.Json.Path.JsonPathMatching;
 
 namespace MRX.Core.ModelBinding.Validation;
 
@@ -130,7 +131,7 @@ internal class MrxObjectModelValidator(
 
     private string CaseKey(string path)
     {
-        return StringMatching.JsonPathTokens()
+        return JsonPathMatching.JsonPathKeys()
             .Replace(path, m => _bindingOptions.ErrorKeyNamingPolicy.ConvertName(m.Value));
     }
 

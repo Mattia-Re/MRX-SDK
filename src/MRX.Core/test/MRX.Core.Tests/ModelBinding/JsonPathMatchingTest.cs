@@ -1,9 +1,9 @@
 using System.Text.RegularExpressions;
-using MRX.Core.ModelBinding;
+using MRX.Json.Path;
 
 namespace MRX.Core.Tests.ModelBinding;
 
-public class StringMatchingTest
+public class JsonPathMatchingTest
 {
     [Fact]
     public void JsonPathTokens_ExtractsAllTokens()
@@ -12,7 +12,7 @@ public class StringMatchingTest
         const string path = "foo.bar[\"worlds\"][0]";
 
         // Act
-        MatchCollection matches = StringMatching.JsonPathTokens().Matches(path);
+        MatchCollection matches = JsonPathMatching.JsonPathKeys().Matches(path);
 
         // Assert
         Assert.Equal(4, matches.Count);
