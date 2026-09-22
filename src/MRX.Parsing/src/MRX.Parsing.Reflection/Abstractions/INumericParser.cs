@@ -1,6 +1,6 @@
 namespace MRX.Parsing.Reflection.Abstractions;
 
-internal interface INumericParser
+public interface INumericParser
 {
     object Parse(Type numericType, string token, IFormatProvider? provider = null);
 }

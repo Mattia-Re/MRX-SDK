@@ -28,25 +28,39 @@ public class ProblemDetailsHttpClient(HttpClient httpClient, IOptions<ProblemDet
             await HandleProblemAsync(res, cancellationToken);
             return res;
         }
-        catch (HttpProblemDetailsException ex)
+        catch (HttpCodedErrorsProblemDetailsException problem)
+        {
+            ValidationMessageStore msgStore = new(editContext);
+
+            // Add root ($) errors if any
+            if (problem.Errors.TryGetValue("$", out CodedError[]? errors))
+            {
+                foreach (CodedError err in errors)
+                {
+                    msgStore.Add(FieldIdentifier.Create(() => sources.RootError), err.Description);
+                }
+            }
+
+            // Map the error keys to field identifiers and then add their errors
+            Dictionary<FieldIdentifier, List<CodedError>> errorMap =
+                _options.ErrorMappingFactory(editContext, problem.Errors, res);
+            foreach ((FieldIdentifier fi, List<CodedError> fieldErrors) in errorMap)
+            {
+                msgStore.Add(fi, fieldErrors.Select(e => e.Description));
+            }
+
+            return res;
+        }
+        catch (HttpProblemDetailsException problem)
         {
             ValidationMessageStore msgStore = new(editContext);
 
             // If the HTTP response provided no MRX coded errors, the best we can do is display the Detail member
             // or a generic root error
-            if (ex is not HttpCodedErrorsProblemDetailsException problem)
-            {
-                string rootErr = sources.RootError = ex.Detail ?? "An unexpected error occurred.";
-                msgStore.Add(
-                    FieldIdentifier.Create(() => sources.RootError),
-                    rootErr);
-                return res;
-            }
-
-            foreach (KeyValuePair<string, CodedError[]> err in problem.Errors)
-            {
-                _options.ErrorFactory(editContext, err.Key, err.Value);
-            }
+            string rootErr = sources.RootError = problem.Detail ?? "An unexpected error occurred.";
+            msgStore.Add(
+                FieldIdentifier.Create(() => sources.RootError),
+                rootErr);
 
             return res;
         }

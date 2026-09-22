@@ -5,9 +5,11 @@ namespace MRX.UI.ErrorsAutoWiring.Http;
 
 public class ProblemDetailsHttpClientOptions
 {
-    public delegate void ErrorFactoryHandler(EditContext editContext, string key, CodedError[] errors);
+    public delegate Dictionary<FieldIdentifier, List<CodedError>> ErrorMappingFactoryHandler(EditContext editContext,
+        Dictionary<string, CodedError[]> errors,
+        HttpResponseMessage response);
 
-    public ErrorFactoryHandler ErrorFactory
+    public ErrorMappingFactoryHandler ErrorMappingFactory
     {
         get;
         set => field = value ?? throw new ArgumentNullException(nameof(value));

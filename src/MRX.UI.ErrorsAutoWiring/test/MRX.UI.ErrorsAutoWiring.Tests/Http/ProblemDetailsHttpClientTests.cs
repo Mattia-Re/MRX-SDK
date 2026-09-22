@@ -8,16 +8,28 @@ using Moq;
 using Moq.Protected;
 using MRX.Core.ModelBinding;
 using MRX.Core.TestHost.Controllers;
+using MRX.Json.Abstractions;
+using MRX.Json.Path;
+using MRX.Json.Reflection.Abstractions;
+using MRX.Json.Reflection.PropertyAccess;
+using MRX.Parsing.Reflection;
+using MRX.UI.ErrorsAutoWiring.Abstractions;
 using MRX.UI.ErrorsAutoWiring.DependencyInjection;
 using MRX.UI.ErrorsAutoWiring.Http;
+using MRX.UI.ErrorsAutoWiring.ModelDiscovery;
+using MRX.UI.ErrorsAutoWiring.Wiring;
 
 namespace MRX.UI.ErrorsAutoWiring.Tests.Http;
 
 public class ProblemDetailsHttpClientTests
 {
-    [Fact]
-    public async Task ProblemDetailsHttpClient_WiresErrorsCorrectly()
+    [Theory]
+    [InlineData(true)]
+    [InlineData(false)]
+    public async Task ProblemDetailsHttpClient_WiresErrorsCorrectly(bool disambiguated)
     {
+        // Arrange
+
         var problem = new
         {
             type = "about:blank",
@@ -26,11 +38,15 @@ public class ProblemDetailsHttpClientTests
             detail = "One or more fields were invalid",
             errors = new Dictionary<string, CodedError[]>
             {
-                { "$", [new CodedError("InvalidValue", "Resource is immutable")] }
+                { "$", [new CodedError("InvalidValue", "Resource is immutable")] },
+                {
+                    ResolveKeyFormat("id", "body", disambiguated),
+                    [new CodedError("InvalidValue", "This value is not accepted")]
+                }
             }
         };
 
-        ProblemDetailsHttpClient client = CreateSut(problem);
+        ProblemDetailsHttpClient client = CreateSut(problem, disambiguated);
         DataBindingSources sources = new()
         {
             Body = new ModelBindingTestFixtureController.MyRequest(
@@ -44,10 +60,18 @@ public class ProblemDetailsHttpClientTests
             Content = JsonContent.Create(sources.Body)
         };
 
+        //Act
+
         await client.SendContextAwareAsync(editContext, req, CancellationToken.None);
+        IEnumerable<string> messages = editContext.GetValidationMessages();
+
+        // Assert
+
+        Assert.Equal(2, messages.Count());
     }
 
-    private static ProblemDetailsHttpClient CreateSut(object? body, string contentType = "application/problem+json")
+    private static ProblemDetailsHttpClient CreateSut(object? body, bool disambiguated,
+        string contentType = "application/problem+json")
     {
         Mock<HttpMessageHandler> mockHandler = new();
         mockHandler
@@ -68,6 +92,8 @@ public class ProblemDetailsHttpClientTests
                         contentType);
                 }
 
+                res.Headers.Add("X-Disambiguated", disambiguated.ToString());
+
                 return res;
             });
 
@@ -77,8 +103,24 @@ public class ProblemDetailsHttpClientTests
         };
 
         ProblemDetailsHttpClientOptions options = new();
-        new ProblemDetailsHttpClientOptionsSetup().Configure(options);
+        IJsonPathWalkerFactory walkerFactory = new JsonPathWalkerFactory();
+        IModelPropertyAccessorProvider accessorProvider = new ModelPropertyAccessorProvider([
+            new StringNodeAccessor(),
+            new ArrayElementAccessor(),
+            new CustomIndexerArrayAccessor(new NumericParser())
+        ]);
+        IModelKeyPathVisitor modelVisitor = new ModelKeyPathVisitor(walkerFactory, accessorProvider);
+        IErrorMappingFactory errorMappingFactory = new DefaultErrorMappingFactory(modelVisitor);
+
+        new ProblemDetailsHttpClientOptionsSetup(errorMappingFactory).Configure(options);
 
         return new ProblemDetailsHttpClient(httpClient, Options.Create(options));
+    }
+
+    private static string ResolveKeyFormat(string key, string sourceName, bool disambiguated)
+    {
+        return disambiguated
+            ? $"{sourceName}.{key}"
+            : key;
     }
 }

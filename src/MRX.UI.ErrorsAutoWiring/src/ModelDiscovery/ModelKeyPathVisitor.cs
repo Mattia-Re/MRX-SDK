@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using MRX.Json.Abstractions;
 using MRX.Json.Path;
 using MRX.Json.Reflection.Abstractions;
+using MRX.UI.ErrorsAutoWiring.Abstractions;
 
 namespace MRX.UI.ErrorsAutoWiring.ModelDiscovery;
 
@@ -10,7 +11,7 @@ namespace MRX.UI.ErrorsAutoWiring.ModelDiscovery;
 /// </summary>
 internal class ModelKeyPathVisitor(
     IJsonPathWalkerFactory walkerFactory,
-    IModelPropertyAccessorProvider accessorProvider)
+    IModelPropertyAccessorProvider accessorProvider) : IModelKeyPathVisitor
 {
     private readonly IJsonPathWalkerFactory _walkerFactory =
         walkerFactory ?? throw new ArgumentNullException(nameof(walkerFactory));
@@ -24,7 +25,7 @@ internal class ModelKeyPathVisitor(
     /// <param name="model">The model to scan for the keys</param>
     /// <param name="keys">All field keys to scan for</param>
     /// <returns>A dictionary linking each key to the corresponding field.</returns>
-    internal Dictionary<string, FieldIdentifier> VisitModel<T>(T model, IEnumerable<string> keys)
+    public Dictionary<string, FieldIdentifier> VisitModel<T>(T model, IEnumerable<string> keys)
     {
         ArgumentNullException.ThrowIfNull(model);
         ArgumentNullException.ThrowIfNull(keys);
@@ -32,7 +33,7 @@ internal class ModelKeyPathVisitor(
         return VisitModel(typeof(T), model, keys);
     }
 
-    internal Dictionary<string, FieldIdentifier> VisitModel(Type modelType, object model, IEnumerable<string> keys)
+    public Dictionary<string, FieldIdentifier> VisitModel(Type modelType, object model, IEnumerable<string> keys)
     {
         ArgumentNullException.ThrowIfNull(modelType);
         ArgumentNullException.ThrowIfNull(model);
