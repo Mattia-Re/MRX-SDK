@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Components.Forms;
-using MRX.Core.ModelBinding;
+using MRX.Core.Common.ModelBinding;
 
 namespace MRX.UI.ErrorsAutoWiring.Abstractions;
 

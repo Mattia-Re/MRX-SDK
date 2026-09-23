@@ -6,16 +6,12 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>true</IsPackable>
-        <Version>1.0.0-rc1</Version>
+        <Version>1.0.0-rc2</Version>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
-        <Description>Shared ASP.NET Core primitives used across the MRX SDK, including ProblemDetails extension helpers and endpoint feature descriptors.</Description>
-        <PackageTags>mrx;aspnetcore;problemdetails</PackageTags>
+        <Description>Framework-agnostic primitives shared across the MRX SDK, safe to use from server, client, and Blazor WebAssembly projects.</Description>
+        <PackageTags>mrx;shared;blazor-wasm</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
-
-    <ItemGroup>
-        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
-    </ItemGroup>
 
     <ItemGroup>
         <None Include="README.md" Pack="true" PackagePath=""/>

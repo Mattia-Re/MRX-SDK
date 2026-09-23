@@ -4,8 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.WebUtilities;
-using MRX.Core.Common;
-using MRX.Core.ModelBinding;
+using MRX.Core.Common.ModelBinding;
 
 namespace MRX.Core.Tests.ModelBinding;
 

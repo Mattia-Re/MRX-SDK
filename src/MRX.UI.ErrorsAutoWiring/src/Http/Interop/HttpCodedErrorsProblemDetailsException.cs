@@ -1,4 +1,4 @@
-using MRX.Core.ModelBinding;
+using MRX.Core.Common.ModelBinding;
 
 namespace MRX.UI.ErrorsAutoWiring.Http.Interop;
 

@@ -1,4 +1,4 @@
-namespace MRX.Core.ModelBinding;
+namespace MRX.Core.Common.ModelBinding;
 
 public record CodedError(
     string Code,

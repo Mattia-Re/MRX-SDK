@@ -1,6 +1,8 @@
 # MRX.Core.Common
 
-Shared ASP.NET Core components used across the MRX SDK, compatible with Blazor WASM projects.
+Framework-agnostic primitives shared across the MRX SDK (e.g. `CodedError`, feature name constants).
+Has no dependency on the ASP.NET Core shared framework, so it's safe to use from server, client,
+and Blazor WebAssembly projects.
 
 ```
 dotnet add package MRX.Core.Common

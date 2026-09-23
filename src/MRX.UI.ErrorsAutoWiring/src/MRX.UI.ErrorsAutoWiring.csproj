@@ -6,10 +6,10 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>true</IsPackable>
-        <Version>1.0.0-rc1</Version>
+        <Version>1.0.0-rc2</Version>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Description>Automatically wires ASP.NET Core ProblemDetails validation errors from HTTP responses into UI form/model state, for use in Blazor and similar client applications.</Description>
-        <PackageTags>mrx;blazor;problemdetails;validation</PackageTags>
+        <PackageTags>mrx;blazor;blazor-wasm;problemdetails;validation</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\MRX.Core\src\MRX.Core.csproj"/>
+        <ProjectReference Include="..\..\MRX.Core.Common\src\MRX.Core.Common.csproj"/>
         <ProjectReference Include="..\..\MRX.Json.Reflection\MRX.Json.Reflection.csproj"/>
     </ItemGroup>
 

@@ -3,7 +3,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using MRX.Core.Common.Features;
-using MRX.Core.ModelBinding;
+using MRX.Core.Common.ModelBinding;
 using MRX.FeatureDiscovery.Common;
 
 namespace MRX.FeatureDiscovery.Tests;

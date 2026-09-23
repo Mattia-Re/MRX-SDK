@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using MRX.Core.Common.ModelBinding;
 using MRX.Core.ModelBinding.Validation;
 
 namespace MRX.Core.ModelBinding;

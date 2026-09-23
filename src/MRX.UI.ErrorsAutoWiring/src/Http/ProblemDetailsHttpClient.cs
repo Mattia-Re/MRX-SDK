@@ -1,7 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.Extensions.Options;
-using MRX.Core.ModelBinding;
+using MRX.Core.Common.ModelBinding;
 using MRX.UI.ErrorsAutoWiring.Http.Interop;
 
 namespace MRX.UI.ErrorsAutoWiring.Http;

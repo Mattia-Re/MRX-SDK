@@ -1,7 +1,7 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 
-namespace MRX.Core.Common;
+namespace MRX.Core;
 
 public static class ProblemDetailsExtensions
 {

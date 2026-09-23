@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.Extensions.Options;
 using Moq;
 using Moq.Protected;
-using MRX.Core.ModelBinding;
+using MRX.Core.Common.ModelBinding;
 using MRX.Json.Abstractions;
 using MRX.Json.Path;
 using MRX.Json.Reflection.Abstractions;
