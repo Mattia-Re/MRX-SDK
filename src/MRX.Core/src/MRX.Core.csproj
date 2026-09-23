@@ -4,6 +4,13 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <IsPackable>true</IsPackable>
+        <Version>1.0.0-rc1</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Description>Core ASP.NET Core building blocks for the MRX SDK: model binding configuration, coded errors, and object model validation extensions.</Description>
+        <PackageTags>mrx;aspnetcore;model-binding;validation</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +20,10 @@
     <ItemGroup>
       <ProjectReference Include="..\..\MRX.Core.Common\src\MRX.Core.Common.csproj" />
         <ProjectReference Include="..\..\MRX.Json\src\MRX.Json\MRX.Json.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
     <ItemGroup>

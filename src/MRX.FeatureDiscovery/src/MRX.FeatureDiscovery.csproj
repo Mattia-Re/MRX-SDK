@@ -4,15 +4,26 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <IsPackable>true</IsPackable>
+        <Version>1.0.0-rc1</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Description>ASP.NET Core feature discovery endpoint and dependency injection extensions for exposing enabled application features to clients.</Description>
+        <PackageTags>mrx;aspnetcore;feature-flags</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App"/>
     </ItemGroup>
-    
+
     <ItemGroup>
       <ProjectReference Include="..\..\MRX.Core\src\MRX.Core.csproj" />
       <ProjectReference Include="..\..\MRX.FeatureDiscovery.Common\src\MRX.FeatureDiscovery.Common.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
 </Project>

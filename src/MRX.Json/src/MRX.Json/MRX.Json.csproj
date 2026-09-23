@@ -4,7 +4,18 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <IsPackable>true</IsPackable>
+        <Version>1.0.0-rc1</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Description>Lightweight JSON Path tokenizing and walking library for traversing and matching nodes within JSON documents.</Description>
+        <PackageTags>mrx;json;jsonpath</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
     <ItemGroup>
         <InternalsVisibleTo Include="MRX.Json.Tests"/>

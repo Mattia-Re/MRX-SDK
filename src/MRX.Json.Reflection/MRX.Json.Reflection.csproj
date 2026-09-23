@@ -4,6 +4,13 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <IsPackable>true</IsPackable>
+        <Version>1.0.0-rc1</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Description>Reflection-based property accessors for JSON model nodes, built on top of MRX.Json and MRX.Parsing.Reflection.</Description>
+        <PackageTags>mrx;json;reflection</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -13,6 +20,10 @@
     <ItemGroup>
         <ProjectReference Include="..\MRX.Json\src\MRX.Json\MRX.Json.csproj"/>
         <ProjectReference Include="..\MRX.Parsing\src\MRX.Parsing.Reflection\MRX.Parsing.Reflection.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath=""/>
     </ItemGroup>
 
     <ItemGroup>

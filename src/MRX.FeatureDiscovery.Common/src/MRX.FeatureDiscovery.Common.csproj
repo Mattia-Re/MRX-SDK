@@ -4,6 +4,17 @@
         <TargetFramework>net10.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <IsPackable>true</IsPackable>
+        <Version>1.0.0-rc1</Version>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <Description>Shared contracts for MRX feature discovery responses, used by both server and client implementations.</Description>
+        <PackageTags>mrx;feature-flags</PackageTags>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath=""/>
+    </ItemGroup>
 
 </Project>

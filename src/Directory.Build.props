@@ -1,0 +1,32 @@
+<Project>
+
+    <PropertyGroup>
+        <!-- NuGet packaging defaults; individual library projects opt in with <IsPackable>true</IsPackable>. -->
+        <IsPackable>false</IsPackable>
+
+        <!-- Each packable project sets its own <Version> so it can be bumped independently. -->
+        <Authors>Mattia Re</Authors>
+        <Company>Mattia Re</Company>
+        <Copyright>Copyright (c) $([System.DateTime]::Now.Year) Mattia Re</Copyright>
+
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/Mattia-Re/MRX-SDK</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Mattia-Re/MRX-SDK</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <!-- Generates an XML doc file for packable projects without requiring doc comments on every public member. -->
+        <GenerateDocumentationFile>false</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="10.0.401" PrivateAssets="All"/>
+    </ItemGroup>
+
+</Project>

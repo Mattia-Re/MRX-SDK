@@ -1,0 +1,126 @@
+name: Verify Package Versions & Publish
+
+on:
+  push:
+    branches: [ "**" ]
+
+jobs:
+  verify-versions:
+    name: Verify package versions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify affected packages had their version bumped
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+          ZERO="0000000000000000000000000000000000000000"
+
+          if [ "$BEFORE" = "$ZERO" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+            echo "No previous commit to diff against (new branch or rewritten history) - skipping version check."
+            exit 0
+          fi
+
+          CHANGED_FILES=$(git diff --name-only "$BEFORE" "$AFTER" -- src)
+
+          # Discovered from the current tree: any .csproj that opts into packing, rather than a
+          # hardcoded list, so newly added/removed packable projects are picked up automatically.
+          mapfile -t PROJECTS < <(
+            grep -rl '<IsPackable>true</IsPackable>' src --include='*.csproj' \
+              | sed 's#^src/##' \
+              | sort
+          )
+
+          if [ "${#PROJECTS[@]}" -eq 0 ]; then
+            echo "::warning::No packable (<IsPackable>true</IsPackable>) projects found under src/."
+          fi
+
+          get_version() {
+            grep -oP '(?<=<Version>)[^<]+' "$1" | head -n1
+          }
+
+          FAILED=0
+          for PROJECT in "${PROJECTS[@]}"; do
+            PROJECT_DIR="$(dirname "$PROJECT")"
+
+            if ! echo "$CHANGED_FILES" | grep -q "^src/$PROJECT_DIR/"; then
+              continue
+            fi
+
+            NEW_VERSION="$(get_version "src/$PROJECT")"
+            OLD_VERSION="$(git show "$BEFORE:src/$PROJECT" 2>/dev/null | grep -oP '(?<=<Version>)[^<]+' | head -n1 || true)"
+
+            if [ -z "$OLD_VERSION" ]; then
+              echo "::notice file=src/$PROJECT::New package ($NEW_VERSION)."
+            elif [ "$OLD_VERSION" = "$NEW_VERSION" ]; then
+              echo "::error file=src/$PROJECT::Files under $PROJECT_DIR changed but <Version> is still $NEW_VERSION. Bump the package version."
+              FAILED=1
+            else
+              echo "$PROJECT: $OLD_VERSION -> $NEW_VERSION"
+            fi
+          done
+
+          if [ "$FAILED" -ne 0 ]; then
+            echo ""
+            echo "One or more affected packages were not version-bumped. Failing."
+            exit 1
+          fi
+
+  test:
+    name: Run tests
+    uses: ./.github/workflows/test.yml
+
+  publish:
+    name: Publish to NuGet
+    needs: [ verify-versions, test ]
+    if: success() && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      id-token: write # required for OIDC trusted publishing
+
+    defaults:
+      run:
+        working-directory: ./src
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore MRX.slnx
+
+      - name: Build
+        run: dotnet build MRX.slnx --no-restore -c Release
+
+      - name: Pack
+        run: dotnet pack MRX.slnx --no-build -c Release -o ./nupkgs
+
+      # Exchanges this job's GitHub OIDC token for a short-lived (1 hour) NuGet API key.
+      # Requires a Trusted Publishing policy configured on nuget.org for this repo/workflow.
+      - name: NuGet login (OIDC -> temporary API key)
+        id: nuget-login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
+      - name: Push to NuGet
+        run: |
+          dotnet nuget push "./nupkgs/*.nupkg" \
+            --api-key "${{ steps.nuget-login.outputs.NUGET_API_KEY }}" \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate

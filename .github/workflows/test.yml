@@ -1,10 +1,9 @@
 name: Run .NET Tests
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_call: # lets publish.yml require this workflow before publishing (covers push-to-main runs)
 
 defaults:
   run:
