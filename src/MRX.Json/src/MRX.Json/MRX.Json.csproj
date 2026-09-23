@@ -9,6 +9,7 @@
     <ItemGroup>
         <InternalsVisibleTo Include="MRX.Json.Tests"/>
         <InternalsVisibleTo Include="MRX.Json.Reflection"/>
+        <InternalsVisibleTo Include="MRX.Json.Reflection.Tests"/>
 
         <InternalsVisibleTo Include="DynamicProxyGenAssembly2"/>
         <InternalsVisibleTo Include="MRX.Core"/>
