@@ -19,8 +19,14 @@
         <!-- Generates an XML doc file for packable projects without requiring doc comments on every public member. -->
         <GenerateDocumentationFile>false</GenerateDocumentationFile>
         <NoWarn>$(NoWarn);CS1591</NoWarn>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <!-- Ship a portable .pdb next to the .dll inside the main nupkg's lib folder (rather than a
+             separate .snupkg or embedding it in the dll). Consumers get full step-through debugging
+             as soon as the package restores, with no symbol-server round trip (which VS Code / Rider
+             don't reliably perform, unlike full Visual Studio) - and, unlike an embedded pdb, this stays
+             a loose file that `dotnet publish` already strips from published output by default
+             (CopyOutputSymbolsToPublishDirectory=false), so WASM/Blazor clients don't pay for it. -->
+        <DebugType>portable</DebugType>
+        <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     </PropertyGroup>

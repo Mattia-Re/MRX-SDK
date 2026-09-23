@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>true</IsPackable>
-        <Version>1.0.0-rc1</Version>
+        <Version>1.0.0-rc2</Version>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Description>Shared contracts for MRX feature discovery responses, used by both server and client implementations.</Description>
         <PackageTags>mrx;feature-flags</PackageTags>

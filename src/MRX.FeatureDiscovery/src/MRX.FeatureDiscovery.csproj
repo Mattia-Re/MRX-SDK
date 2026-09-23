@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>true</IsPackable>
-        <Version>1.0.0-rc1</Version>
+        <Version>1.0.0-rc2</Version>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Description>ASP.NET Core feature discovery endpoint and dependency injection extensions for exposing enabled application features to clients.</Description>
         <PackageTags>mrx;aspnetcore;feature-flags</PackageTags>

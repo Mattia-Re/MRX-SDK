@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>true</IsPackable>
-        <Version>1.0.0-rc1</Version>
+        <Version>1.0.0-rc2</Version>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Description>Generic parsing abstractions for converting string input into typed values.</Description>
         <PackageTags>mrx;parsing</PackageTags>
