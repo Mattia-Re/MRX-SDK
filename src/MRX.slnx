@@ -13,6 +13,8 @@
     <Folder Name="/test/MRX.UI.ErrorsAutoWiring/">
         <Project
                 Path="MRX.UI.ErrorsAutoWiring/test/MRX.UI.ErrorsAutoWiring.Tests/MRX.UI.ErrorsAutoWiring.Tests.csproj"/>
+        <Project
+                Path="MRX.UI.ErrorsAutoWiring/test/MRX.UI.ErrorsAutoWiring.Blazor.Tests/MRX.UI.ErrorsAutoWiring.Blazor.Tests.csproj"/>
     </Folder>
 
     <Folder Name="/src/MRX.Json/">

@@ -20,6 +20,7 @@
     <ItemGroup>
         <InternalsVisibleTo Include="DynamicProxyGenAssembly2"/>
         <InternalsVisibleTo Include="MRX.UI.ErrorsAutoWiring.Tests"/>
+        <InternalsVisibleTo Include="MRX.UI.ErrorsAutoWiring.Blazor.Tests"/>
     </ItemGroup>
 
 </Project>

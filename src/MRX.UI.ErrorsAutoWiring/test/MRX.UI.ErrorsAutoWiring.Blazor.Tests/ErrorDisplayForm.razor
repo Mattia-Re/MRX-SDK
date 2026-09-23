@@ -1,0 +1,25 @@
+@using MRX.UI.ErrorsAutoWiring.Blazor.Tests.Models
+@* A plain, unremarkable EditForm - no SDK-specific components other than the EditContext.Model
+   being an MRX.UI.ErrorsAutoWiring.Http.DataBindingSources instance. Everything else (EditForm,
+   ValidationSummary, ValidationMessage, InputText) is stock Blazor. *@
+<EditForm EditContext="EditContext">
+    <ValidationSummary id="root-summary"/>
+
+    <InputText @bind-Value="Body.Obj.Data"/>
+    <ValidationMessage For="() => Body.Obj.Data" id="body-obj-data-msg"/>
+
+    <ValidationMessage For="() => Body.Obj.Cars[0].Name" id="body-obj-cars0-name-msg"/>
+
+    <InputText @bind-Value="Query.Obj.Data"/>
+    <ValidationMessage For="() => Query.Obj.Data" id="query-obj-data-msg"/>
+
+    <ValidationMessage For="() => Query.Obj.Cars[0].Name" id="query-obj-cars0-name-msg"/>
+</EditForm>
+
+@code {
+    [Parameter, EditorRequired] public EditContext EditContext { get; set; } = null!;
+
+    [Parameter, EditorRequired] public SampleRequest Body { get; set; } = null!;
+
+    [Parameter, EditorRequired] public SampleRequest Query { get; set; } = null!;
+}
