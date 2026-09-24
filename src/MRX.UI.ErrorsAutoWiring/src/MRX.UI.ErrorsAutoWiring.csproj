@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
 
         <IsPackable>true</IsPackable>
-        <Version>1.0.0-rc4</Version>
+        <Version>1.0.0-rc5</Version>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
         <Description>Automatically wires ASP.NET Core ProblemDetails validation errors from HTTP responses into UI form/model state, for use in Blazor and similar client applications.</Description>
         <PackageTags>mrx;blazor;blazor-wasm;problemdetails;validation</PackageTags>

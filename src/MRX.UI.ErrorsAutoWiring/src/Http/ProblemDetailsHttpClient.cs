@@ -64,6 +64,10 @@ public class ProblemDetailsHttpClient(HttpClient httpClient, IOptions<ProblemDet
 
             return res;
         }
+        finally
+        {
+            editContext.NotifyValidationStateChanged();
+        }
     }
 
     private static async Task HandleProblemAsync(HttpResponseMessage response, CancellationToken cancellationToken)
