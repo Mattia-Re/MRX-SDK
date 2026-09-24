@@ -6,6 +6,11 @@ namespace MRX.UI.ErrorsAutoWiring.Http.Interop;
 
 public class HttpProblemDetailsException : Exception
 {
+    private readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        PropertyNameCaseInsensitive = true
+    };
+
     public string Type { get; init; } = string.Empty;
     public int Status { get; init; }
     public string? Title { get; init; }
@@ -24,7 +29,7 @@ public class HttpProblemDetailsException : Exception
             return false;
         }
 
-        TValue? data = ext.Deserialize<TValue>();
+        TValue? data = ext.Deserialize<TValue>(_jsonOptions);
         if (data == null)
         {
             value = default;
