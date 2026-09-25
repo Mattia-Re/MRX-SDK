@@ -48,6 +48,8 @@ public class DefaultErrorMappingFactory(IModelKeyPathVisitor modelVisitor) : IEr
                 {
                     "body" => sources.Body,
                     "query" => sources.Query,
+                    "path" => sources.Path,
+                    "header" => sources.Header,
                     _ => null
                 };
 

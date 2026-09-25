@@ -1,5 +1,5 @@
 using System.Text.Json;
-using MRX.Core.Configuration;
+using MRX.Core.DependencyInjection;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 

@@ -19,6 +19,16 @@ file sealed class QueryModel
     public string Filter { get; set; } = string.Empty;
 }
 
+file sealed class PathModel
+{
+    public string Id { get; set; } = string.Empty;
+}
+
+file sealed class HeaderModel
+{
+    public string Token { get; set; } = string.Empty;
+}
+
 public class DefaultErrorMappingFactoryTests
 {
     // ---- Helpers ----
@@ -119,19 +129,30 @@ public class DefaultErrorMappingFactoryTests
         // Arrange
         BodyModel bodyModel = new();
         QueryModel queryModel = new();
-        DataBindingSources sources = new() { Body = bodyModel, Query = queryModel };
+        PathModel pathModel = new();
+        HeaderModel headerModel = new();
+        DataBindingSources sources = new()
+        {
+            Body = bodyModel, Query = queryModel, Path = pathModel, Header = headerModel,
+        };
         EditContext editContext = CreateEditContext(sources);
 
         CodedError bodyError = new("E1", "Name is required");
         CodedError queryError = new("E2", "Filter is invalid");
+        CodedError pathError = new("E3", "Id is invalid");
+        CodedError headerError = new("E4", "Token is invalid");
         Dictionary<string, CodedError[]> errors = new()
         {
             ["body.name"] = [bodyError],
             ["query.filter"] = [queryError],
+            ["path.id"] = [pathError],
+            ["header.token"] = [headerError],
         };
 
         FieldIdentifier bodyFieldId = new(bodyModel, "Name");
         FieldIdentifier queryFieldId = new(queryModel, "Filter");
+        FieldIdentifier pathFieldId = new(pathModel, "Id");
+        FieldIdentifier headerFieldId = new(headerModel, "Token");
 
         Mock<IModelKeyPathVisitor> modelVisitorMock = new();
         modelVisitorMock
@@ -144,6 +165,16 @@ public class DefaultErrorMappingFactoryTests
                 typeof(QueryModel), queryModel,
                 It.Is<IEnumerable<string>>(k => k.SequenceEqual(new List<string> { "filter" }))))
             .Returns(new Dictionary<string, FieldIdentifier> { ["filter"] = queryFieldId });
+        modelVisitorMock
+            .Setup(v => v.VisitModel(
+                typeof(PathModel), pathModel,
+                It.Is<IEnumerable<string>>(k => k.SequenceEqual(new List<string> { "id" }))))
+            .Returns(new Dictionary<string, FieldIdentifier> { ["id"] = pathFieldId });
+        modelVisitorMock
+            .Setup(v => v.VisitModel(
+                typeof(HeaderModel), headerModel,
+                It.Is<IEnumerable<string>>(k => k.SequenceEqual(new List<string> { "token" }))))
+            .Returns(new Dictionary<string, FieldIdentifier> { ["token"] = headerFieldId });
 
         DefaultErrorMappingFactory factory = new(modelVisitorMock.Object);
         HttpResponseMessage response = CreateResponse("true");
@@ -153,9 +184,11 @@ public class DefaultErrorMappingFactoryTests
             factory.CreateErrorFieldMap(editContext, errors, response);
 
         // Assert
-        Assert.Equal(2, result.Count);
+        Assert.Equal(4, result.Count);
         Assert.Same(bodyError, Assert.Single(result[bodyFieldId]));
         Assert.Same(queryError, Assert.Single(result[queryFieldId]));
+        Assert.Same(pathError, Assert.Single(result[pathFieldId]));
+        Assert.Same(headerError, Assert.Single(result[headerFieldId]));
     }
 
     [Fact]
@@ -166,7 +199,7 @@ public class DefaultErrorMappingFactoryTests
         EditContext editContext = CreateEditContext(sources);
         Dictionary<string, CodedError[]> errors = new()
         {
-            ["header.token"] = [new CodedError("E9", "Unrecognized source")],
+            ["cookie.token"] = [new CodedError("E9", "Unrecognized source")],
         };
 
         Mock<IModelKeyPathVisitor> modelVisitorMock = new();
@@ -196,7 +229,7 @@ public class DefaultErrorMappingFactoryTests
         Dictionary<string, CodedError[]> errors = new()
         {
             ["body.name"] = [bodyError],
-            ["header.token"] = [new CodedError("E9", "Unrecognized source")],
+            ["cookie.token"] = [new CodedError("E9", "Unrecognized source")],
         };
 
         FieldIdentifier bodyFieldId = new(bodyModel, "Name");
@@ -258,31 +291,54 @@ public class DefaultErrorMappingFactoryTests
         // Arrange
         BodyModel bodyModel = new();
         QueryModel queryModel = new();
-        DataBindingSources sources = new() { Body = bodyModel, Query = queryModel };
+        PathModel pathModel = new();
+        HeaderModel headerModel = new();
+        DataBindingSources sources = new()
+        {
+            Body = bodyModel, Query = queryModel, Path = pathModel, Header = headerModel,
+        };
         EditContext editContext = CreateEditContext(sources);
 
         CodedError nameError = new("E1", "Name is required");
         CodedError filterError = new("E2", "Filter is invalid");
+        CodedError idError = new("E3", "Id is invalid");
+        CodedError tokenError = new("E4", "Token is invalid");
         Dictionary<string, CodedError[]> errors = new()
         {
             ["name"] = [nameError],
             ["filter"] = [filterError],
+            ["id"] = [idError],
+            ["token"] = [tokenError],
         };
+
+        List<string> allKeys = ["name", "filter", "id", "token"];
 
         FieldIdentifier bodyFieldId = new(bodyModel, "Name");
         FieldIdentifier queryFieldId = new(queryModel, "Filter");
+        FieldIdentifier pathFieldId = new(pathModel, "Id");
+        FieldIdentifier headerFieldId = new(headerModel, "Token");
 
         Mock<IModelKeyPathVisitor> modelVisitorMock = new();
         modelVisitorMock
             .Setup(v => v.VisitModel(
                 typeof(BodyModel), bodyModel,
-                It.Is<IEnumerable<string>>(k => k.SequenceEqual(new List<string> { "name", "filter" }))))
+                It.Is<IEnumerable<string>>(k => k.SequenceEqual(allKeys))))
             .Returns(new Dictionary<string, FieldIdentifier> { ["name"] = bodyFieldId });
         modelVisitorMock
             .Setup(v => v.VisitModel(
                 typeof(QueryModel), queryModel,
-                It.Is<IEnumerable<string>>(k => k.SequenceEqual(new List<string> { "name", "filter" }))))
+                It.Is<IEnumerable<string>>(k => k.SequenceEqual(allKeys))))
             .Returns(new Dictionary<string, FieldIdentifier> { ["filter"] = queryFieldId });
+        modelVisitorMock
+            .Setup(v => v.VisitModel(
+                typeof(PathModel), pathModel,
+                It.Is<IEnumerable<string>>(k => k.SequenceEqual(allKeys))))
+            .Returns(new Dictionary<string, FieldIdentifier> { ["id"] = pathFieldId });
+        modelVisitorMock
+            .Setup(v => v.VisitModel(
+                typeof(HeaderModel), headerModel,
+                It.Is<IEnumerable<string>>(k => k.SequenceEqual(allKeys))))
+            .Returns(new Dictionary<string, FieldIdentifier> { ["token"] = headerFieldId });
 
         DefaultErrorMappingFactory factory = new(modelVisitorMock.Object);
         HttpResponseMessage response = CreateResponse("false");
@@ -292,9 +348,11 @@ public class DefaultErrorMappingFactoryTests
             factory.CreateErrorFieldMap(editContext, errors, response);
 
         // Assert
-        Assert.Equal(2, result.Count);
+        Assert.Equal(4, result.Count);
         Assert.Same(nameError, Assert.Single(result[bodyFieldId]));
         Assert.Same(filterError, Assert.Single(result[queryFieldId]));
+        Assert.Same(idError, Assert.Single(result[pathFieldId]));
+        Assert.Same(tokenError, Assert.Single(result[headerFieldId]));
     }
 
     [Fact]

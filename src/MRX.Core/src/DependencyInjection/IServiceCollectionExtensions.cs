@@ -1,7 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using MRX.Core.Configuration;
 using MRX.Core.ModelBinding;
 
-namespace MRX.Core.Configuration;
+namespace MRX.Core.DependencyInjection;
 
 /// <summary>
 ///     Provides extension methods for registering MRX services on an <see cref="IServiceCollection" />.

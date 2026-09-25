@@ -2,7 +2,7 @@ using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
-using MRX.Core.Configuration;
+using MRX.Core.DependencyInjection;
 using MRX.FeatureDiscovery.DependencyInjection;
 
 namespace MRX.FeatureDiscovery.Tests;

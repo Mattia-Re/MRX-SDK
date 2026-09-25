@@ -41,4 +41,8 @@ clients that want to:
   type conversion) that the higher-level packages are built on. They're usable standalone if you
   only need JSON Path matching or generic parsing.
 
+### Limitations
+
+Only body, query, URL path and header binding sources are currently supported.
+
 Continue to [Getting Started](getting-started.md) to wire these up in a project.
