@@ -1,0 +1,594 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  commentId: T:MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  id: MatchedRoute
+  parent: MRX.FeatureDiscovery.RouteProbing
+  children:
+  - MRX.FeatureDiscovery.RouteProbing.MatchedRoute.#ctor(Microsoft.AspNetCore.Routing.Template.TemplateMatcher,Microsoft.AspNetCore.Routing.RouteEndpoint)
+  - MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint
+  - MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher
+  langs:
+  - csharp
+  - vb
+  name: MatchedRoute
+  nameWithType: MatchedRoute
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  type: Class
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: MatchedRoute
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+    startLine: 11
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: >-
+    Pairs a compiled route template matcher with the endpoint it resolves to, so a candidate path can be
+
+    tested against the route without re-parsing its template.
+  example: []
+  syntax:
+    content: 'public record MatchedRoute : IEquatable<MatchedRoute>'
+    content.vb: Public Class MatchedRoute Implements IEquatable(Of MatchedRoute)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{MRX.FeatureDiscovery.RouteProbing.MatchedRoute}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.#ctor(Microsoft.AspNetCore.Routing.Template.TemplateMatcher,Microsoft.AspNetCore.Routing.RouteEndpoint)
+  commentId: M:MRX.FeatureDiscovery.RouteProbing.MatchedRoute.#ctor(Microsoft.AspNetCore.Routing.Template.TemplateMatcher,Microsoft.AspNetCore.Routing.RouteEndpoint)
+  id: '#ctor(Microsoft.AspNetCore.Routing.Template.TemplateMatcher,Microsoft.AspNetCore.Routing.RouteEndpoint)'
+  parent: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  langs:
+  - csharp
+  - vb
+  name: MatchedRoute(TemplateMatcher, RouteEndpoint)
+  nameWithType: MatchedRoute.MatchedRoute(TemplateMatcher, RouteEndpoint)
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.MatchedRoute(Microsoft.AspNetCore.Routing.Template.TemplateMatcher, Microsoft.AspNetCore.Routing.RouteEndpoint)
+  type: Constructor
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: .ctor
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+    startLine: 11
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: >-
+    Pairs a compiled route template matcher with the endpoint it resolves to, so a candidate path can be
+
+    tested against the route without re-parsing its template.
+  example: []
+  syntax:
+    content: public MatchedRoute(TemplateMatcher Matcher, RouteEndpoint Endpoint)
+    parameters:
+    - id: Matcher
+      type: Microsoft.AspNetCore.Routing.Template.TemplateMatcher
+      description: The matcher compiled from the endpoint's route template.
+    - id: Endpoint
+      type: Microsoft.AspNetCore.Routing.RouteEndpoint
+      description: The endpoint that the route resolves to when matched.
+    content.vb: Public Sub New(Matcher As TemplateMatcher, Endpoint As RouteEndpoint)
+  overload: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.#ctor*
+  nameWithType.vb: MatchedRoute.New(TemplateMatcher, RouteEndpoint)
+  fullName.vb: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.New(Microsoft.AspNetCore.Routing.Template.TemplateMatcher, Microsoft.AspNetCore.Routing.RouteEndpoint)
+  name.vb: New(TemplateMatcher, RouteEndpoint)
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher
+  commentId: P:MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher
+  id: Matcher
+  parent: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  langs:
+  - csharp
+  - vb
+  name: Matcher
+  nameWithType: MatchedRoute.Matcher
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher
+  type: Property
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Matcher
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+    startLine: 11
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: The matcher compiled from the endpoint's route template.
+  example: []
+  syntax:
+    content: public TemplateMatcher Matcher { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.AspNetCore.Routing.Template.TemplateMatcher
+    content.vb: Public Property Matcher As TemplateMatcher
+  overload: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher*
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint
+  commentId: P:MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint
+  id: Endpoint
+  parent: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  langs:
+  - csharp
+  - vb
+  name: Endpoint
+  nameWithType: MatchedRoute.Endpoint
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint
+  type: Property
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Endpoint
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/MatchedRoute.cs
+    startLine: 11
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: The endpoint that the route resolves to when matched.
+  example: []
+  syntax:
+    content: public RouteEndpoint Endpoint { get; init; }
+    parameters: []
+    return:
+      type: Microsoft.AspNetCore.Routing.RouteEndpoint
+    content.vb: Public Property Endpoint As RouteEndpoint
+  overload: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint*
+references:
+- uid: MRX.FeatureDiscovery.RouteProbing
+  commentId: N:MRX.FeatureDiscovery.RouteProbing
+  name: MRX.FeatureDiscovery.RouteProbing
+  nameWithType: MRX.FeatureDiscovery.RouteProbing
+  fullName: MRX.FeatureDiscovery.RouteProbing
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{MRX.FeatureDiscovery.RouteProbing.MatchedRoute}
+  commentId: T:System.IEquatable{MRX.FeatureDiscovery.RouteProbing.MatchedRoute}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<MatchedRoute>
+  nameWithType: IEquatable<MatchedRoute>
+  fullName: System.IEquatable<MRX.FeatureDiscovery.RouteProbing.MatchedRoute>
+  nameWithType.vb: IEquatable(Of MatchedRoute)
+  fullName.vb: System.IEquatable(Of MRX.FeatureDiscovery.RouteProbing.MatchedRoute)
+  name.vb: IEquatable(Of MatchedRoute)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+    name: MatchedRoute
+    href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+    name: MatchedRoute
+    href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.#ctor*
+  commentId: Overload:MRX.FeatureDiscovery.RouteProbing.MatchedRoute.#ctor
+  href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html#MRX_FeatureDiscovery_RouteProbing_MatchedRoute__ctor_Microsoft_AspNetCore_Routing_Template_TemplateMatcher_Microsoft_AspNetCore_Routing_RouteEndpoint_
+  name: MatchedRoute
+  nameWithType: MatchedRoute.MatchedRoute
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.MatchedRoute
+  nameWithType.vb: MatchedRoute.New
+  fullName.vb: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Routing.Template.TemplateMatcher
+  commentId: T:Microsoft.AspNetCore.Routing.Template.TemplateMatcher
+  parent: Microsoft.AspNetCore.Routing.Template
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.template.templatematcher
+  name: TemplateMatcher
+  nameWithType: TemplateMatcher
+  fullName: Microsoft.AspNetCore.Routing.Template.TemplateMatcher
+- uid: Microsoft.AspNetCore.Routing.RouteEndpoint
+  commentId: T:Microsoft.AspNetCore.Routing.RouteEndpoint
+  parent: Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.routeendpoint
+  name: RouteEndpoint
+  nameWithType: RouteEndpoint
+  fullName: Microsoft.AspNetCore.Routing.RouteEndpoint
+- uid: Microsoft.AspNetCore.Routing.Template
+  commentId: N:Microsoft.AspNetCore.Routing.Template
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Routing.Template
+  nameWithType: Microsoft.AspNetCore.Routing.Template
+  fullName: Microsoft.AspNetCore.Routing.Template
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing.Template
+    name: Template
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.template
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing.Template
+    name: Template
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.template
+- uid: Microsoft.AspNetCore.Routing
+  commentId: N:Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Routing
+  nameWithType: Microsoft.AspNetCore.Routing
+  fullName: Microsoft.AspNetCore.Routing
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher*
+  commentId: Overload:MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher
+  href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html#MRX_FeatureDiscovery_RouteProbing_MatchedRoute_Matcher
+  name: Matcher
+  nameWithType: MatchedRoute.Matcher
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Matcher
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint*
+  commentId: Overload:MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint
+  href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html#MRX_FeatureDiscovery_RouteProbing_MatchedRoute_Endpoint
+  name: Endpoint
+  nameWithType: MatchedRoute.Endpoint
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.Endpoint

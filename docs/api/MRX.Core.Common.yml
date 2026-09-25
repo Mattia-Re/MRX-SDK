@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.Common
+  id: Common
+  parent: MRX.Core
+  children:
+  - MRX.Core.Common.Features
+  - MRX.Core.Common.ModelBinding
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.Common
+  type: Namespace
+references:
+- uid: MRX.Core.Common.Features
+  commentId: N:MRX.Core.Common.Features
+  name: MRX.Core.Common.Features
+  nameWithType: MRX.Core.Common.Features
+  fullName: MRX.Core.Common.Features
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Common
+    name: Common
+  - name: .
+  - uid: MRX.Core.Common.Features
+    name: Features
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Common
+    name: Common
+  - name: .
+  - uid: MRX.Core.Common.Features
+    name: Features
+- uid: MRX.Core.Common.ModelBinding
+  commentId: N:MRX.Core.Common.ModelBinding
+  name: MRX.Core.Common.ModelBinding
+  nameWithType: MRX.Core.Common.ModelBinding
+  fullName: MRX.Core.Common.ModelBinding
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Common
+    name: Common
+  - name: .
+  - uid: MRX.Core.Common.ModelBinding
+    name: ModelBinding
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Common
+    name: Common
+  - name: .
+  - uid: MRX.Core.Common.ModelBinding
+    name: ModelBinding

@@ -29,6 +29,18 @@ internal class MrxObjectModelValidator(
 
     private readonly MvcOptions _mvcOptions = mvcOptions.Value;
 
+    /// <summary>
+    ///     Validates the model, then re-keys and reformats resulting <see cref="ModelError" /> entries per ADR-001:
+    ///     applying the configured error key naming policy, optionally prefixing keys with their binding source name
+    ///     when <see cref="DisambiguateAttribute" /> is present, and merging colliding keys once all action parameters
+    ///     have been validated.
+    /// </summary>
+    /// <param name="actionContext">The context of the current action being validated.</param>
+    /// <param name="validationState">Metadata used to determine whether a model has already been validated.</param>
+    /// <param name="prefix">The model prefix. Used as a prefix for the keys in the <see cref="ModelStateDictionary" />.</param>
+    /// <param name="model">The model to validate.</param>
+    /// <param name="metadata">The <see cref="ModelMetadata" /> associated with the model.</param>
+    /// <param name="container">The container of the model being validated.</param>
     public override void Validate(ActionContext actionContext, ValidationStateDictionary? validationState,
         string? prefix, object? model,
         ModelMetadata metadata, object? container)
@@ -135,6 +147,16 @@ internal class MrxObjectModelValidator(
             .Replace(path, m => _bindingOptions.ErrorKeyNamingPolicy.ConvertName(m.Value));
     }
 
+    /// <summary>
+    ///     Creates the <see cref="RootRequiredSuppressingValidationVisitor" /> used to validate models without
+    ///     top-level validation, so that an unbound body parameter does not add a spurious error to the model state.
+    /// </summary>
+    /// <param name="actionContext">The context of the current action being validated.</param>
+    /// <param name="validatorProvider">The provider used to resolve model validators.</param>
+    /// <param name="validatorCache">A cache of validators.</param>
+    /// <param name="metadataProvider">The provider used to resolve <see cref="ModelMetadata" />.</param>
+    /// <param name="validationState">Metadata used to determine whether a model has already been validated.</param>
+    /// <returns>A <see cref="RootRequiredSuppressingValidationVisitor" /> configured from the current MVC options.</returns>
     public override ValidationVisitor GetValidationVisitor(ActionContext actionContext,
         IModelValidatorProvider validatorProvider,
         ValidatorCache validatorCache, IModelMetadataProvider metadataProvider,

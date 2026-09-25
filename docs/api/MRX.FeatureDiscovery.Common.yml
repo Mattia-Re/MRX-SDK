@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery.Common
+  commentId: N:MRX.FeatureDiscovery.Common
+  id: Common
+  parent: MRX.FeatureDiscovery
+  children:
+  - MRX.FeatureDiscovery.Common.FeatureDiscoveryResponse
+  langs:
+  - csharp
+  - vb
+  name: MRX.FeatureDiscovery.Common
+  nameWithType: MRX.FeatureDiscovery.Common
+  fullName: MRX.FeatureDiscovery.Common
+  type: Namespace
+  assemblies:
+  - MRX.FeatureDiscovery.Common
+references:
+- uid: MRX.FeatureDiscovery.Common.FeatureDiscoveryResponse
+  commentId: T:MRX.FeatureDiscovery.Common.FeatureDiscoveryResponse
+  href: MRX.FeatureDiscovery.Common.FeatureDiscoveryResponse.html
+  name: FeatureDiscoveryResponse
+  nameWithType: FeatureDiscoveryResponse
+  fullName: MRX.FeatureDiscovery.Common.FeatureDiscoveryResponse

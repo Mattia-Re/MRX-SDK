@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions
+  commentId: N:MRX.UI.ErrorsAutoWiring.Abstractions
+  id: Abstractions
+  parent: MRX.UI.ErrorsAutoWiring
+  children:
+  - MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  - MRX.UI.ErrorsAutoWiring.Abstractions.IModelKeyPathVisitor
+  langs:
+  - csharp
+  - vb
+  name: MRX.UI.ErrorsAutoWiring.Abstractions
+  nameWithType: MRX.UI.ErrorsAutoWiring.Abstractions
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions
+  type: Namespace
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+references:
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  commentId: T:MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  parent: MRX.UI.ErrorsAutoWiring.Abstractions
+  href: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.html
+  name: IErrorMappingFactory
+  nameWithType: IErrorMappingFactory
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions.IModelKeyPathVisitor
+  commentId: T:MRX.UI.ErrorsAutoWiring.Abstractions.IModelKeyPathVisitor
+  parent: MRX.UI.ErrorsAutoWiring.Abstractions
+  href: MRX.UI.ErrorsAutoWiring.Abstractions.IModelKeyPathVisitor.html
+  name: IModelKeyPathVisitor
+  nameWithType: IModelKeyPathVisitor
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions.IModelKeyPathVisitor
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions
+  commentId: N:MRX.UI.ErrorsAutoWiring.Abstractions
+  name: MRX.UI.ErrorsAutoWiring.Abstractions
+  nameWithType: MRX.UI.ErrorsAutoWiring.Abstractions
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+    name: Abstractions

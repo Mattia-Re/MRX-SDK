@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery.RouteProbing
+  commentId: N:MRX.FeatureDiscovery.RouteProbing
+  id: RouteProbing
+  parent: MRX.FeatureDiscovery
+  children:
+  - MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  - MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  langs:
+  - csharp
+  - vb
+  name: MRX.FeatureDiscovery.RouteProbing
+  nameWithType: MRX.FeatureDiscovery.RouteProbing
+  fullName: MRX.FeatureDiscovery.RouteProbing
+  type: Namespace
+  assemblies:
+  - MRX.FeatureDiscovery
+references:
+- uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  commentId: T:MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+  href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html
+  name: MatchedRoute
+  nameWithType: MatchedRoute
+  fullName: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  commentId: T:MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  parent: MRX.FeatureDiscovery.RouteProbing
+  href: MRX.FeatureDiscovery.RouteProbing.RouteProbe.html
+  name: RouteProbe
+  nameWithType: RouteProbe
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+- uid: MRX.FeatureDiscovery.RouteProbing
+  commentId: N:MRX.FeatureDiscovery.RouteProbing
+  name: MRX.FeatureDiscovery.RouteProbing
+  nameWithType: MRX.FeatureDiscovery.RouteProbing
+  fullName: MRX.FeatureDiscovery.RouteProbing
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing

@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Wiring
+  commentId: N:MRX.UI.ErrorsAutoWiring.Wiring
+  id: Wiring
+  parent: MRX.UI.ErrorsAutoWiring
+  children:
+  - MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory
+  langs:
+  - csharp
+  - vb
+  name: MRX.UI.ErrorsAutoWiring.Wiring
+  nameWithType: MRX.UI.ErrorsAutoWiring.Wiring
+  fullName: MRX.UI.ErrorsAutoWiring.Wiring
+  type: Namespace
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+references:
+- uid: MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory
+  commentId: T:MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory
+  href: MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory.html
+  name: DefaultErrorMappingFactory
+  nameWithType: DefaultErrorMappingFactory
+  fullName: MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory

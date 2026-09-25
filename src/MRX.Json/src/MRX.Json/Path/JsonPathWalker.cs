@@ -3,10 +3,20 @@ using MRX.Json.Abstractions;
 
 namespace MRX.Json.Path;
 
+/// <summary>
+/// Walks a JSON path string one token at a time, splitting on property and array-accessor syntax.
+/// </summary>
+/// <param name="path">The JSON path to walk.</param>
 public class JsonPathWalker(string path) : IJsonPathWalker
 {
     private string _path = path;
 
+    /// <summary>
+    /// Advances to and returns the next token in the path, consuming it.
+    /// </summary>
+    /// <param name="token">When this method returns <see langword="true"/>, the next token in the path.</param>
+    /// <returns><see langword="true"/> if a token was found; <see langword="false"/> if the path is fully consumed.</returns>
+    /// <exception cref="InvalidOperationException">The matched token does not correspond to a known token type.</exception>
     public bool MoveNext(out JsonPathToken token)
     {
         if (IsPathFullyConsumed()) return NoNextToken(out token);
@@ -41,11 +51,20 @@ public class JsonPathWalker(string path) : IJsonPathWalker
         return true;
     }
 
+    /// <summary>
+    /// Determines whether the remaining path has been fully consumed.
+    /// </summary>
+    /// <returns><see langword="true"/> if no path remains; otherwise, <see langword="false"/>.</returns>
     private bool IsPathFullyConsumed()
     {
         return _path == string.Empty;
     }
 
+    /// <summary>
+    /// Sets <paramref name="token"/> to its default value to signal that no further tokens remain.
+    /// </summary>
+    /// <param name="token">Set to <c>default</c>.</param>
+    /// <returns><see langword="false"/>, always.</returns>
     private static bool NoNextToken(out JsonPathToken token)
     {
         token = default;

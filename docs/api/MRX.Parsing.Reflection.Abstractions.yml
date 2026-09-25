@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Parsing.Reflection.Abstractions
+  commentId: N:MRX.Parsing.Reflection.Abstractions
+  id: Abstractions
+  parent: MRX.Parsing.Reflection
+  children:
+  - MRX.Parsing.Reflection.Abstractions.INumericParser
+  langs:
+  - csharp
+  - vb
+  name: MRX.Parsing.Reflection.Abstractions
+  nameWithType: MRX.Parsing.Reflection.Abstractions
+  fullName: MRX.Parsing.Reflection.Abstractions
+  type: Namespace
+  assemblies:
+  - MRX.Parsing.Reflection
+references:
+- uid: MRX.Parsing.Reflection.Abstractions.INumericParser
+  commentId: T:MRX.Parsing.Reflection.Abstractions.INumericParser
+  parent: MRX.Parsing.Reflection.Abstractions
+  href: MRX.Parsing.Reflection.Abstractions.INumericParser.html
+  name: INumericParser
+  nameWithType: INumericParser
+  fullName: MRX.Parsing.Reflection.Abstractions.INumericParser
+- uid: MRX.Parsing.Reflection.Abstractions
+  commentId: N:MRX.Parsing.Reflection.Abstractions
+  name: MRX.Parsing.Reflection.Abstractions
+  nameWithType: MRX.Parsing.Reflection.Abstractions
+  fullName: MRX.Parsing.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions

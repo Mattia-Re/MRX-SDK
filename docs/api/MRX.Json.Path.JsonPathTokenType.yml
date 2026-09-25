@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Path.JsonPathTokenType
+  commentId: T:MRX.Json.Path.JsonPathTokenType
+  id: JsonPathTokenType
+  parent: MRX.Json.Path
+  children:
+  - MRX.Json.Path.JsonPathTokenType.ArrayIndex
+  - MRX.Json.Path.JsonPathTokenType.ArrayStringIndex
+  - MRX.Json.Path.JsonPathTokenType.Property
+  langs:
+  - csharp
+  - vb
+  name: JsonPathTokenType
+  nameWithType: JsonPathTokenType
+  fullName: MRX.Json.Path.JsonPathTokenType
+  type: Enum
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: JsonPathTokenType
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+    startLine: 5
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  summary: Identifies the kind of a JSON path token.
+  example: []
+  syntax:
+    content: public enum JsonPathTokenType
+    content.vb: Public Enum JsonPathTokenType
+- uid: MRX.Json.Path.JsonPathTokenType.Property
+  commentId: F:MRX.Json.Path.JsonPathTokenType.Property
+  id: Property
+  parent: MRX.Json.Path.JsonPathTokenType
+  langs:
+  - csharp
+  - vb
+  name: Property
+  nameWithType: JsonPathTokenType.Property
+  fullName: MRX.Json.Path.JsonPathTokenType.Property
+  type: Field
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Property
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+    startLine: 8
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  summary: A named object property.
+  example: []
+  syntax:
+    content: Property = 0
+    return:
+      type: MRX.Json.Path.JsonPathTokenType
+- uid: MRX.Json.Path.JsonPathTokenType.ArrayIndex
+  commentId: F:MRX.Json.Path.JsonPathTokenType.ArrayIndex
+  id: ArrayIndex
+  parent: MRX.Json.Path.JsonPathTokenType
+  langs:
+  - csharp
+  - vb
+  name: ArrayIndex
+  nameWithType: JsonPathTokenType.ArrayIndex
+  fullName: MRX.Json.Path.JsonPathTokenType.ArrayIndex
+  type: Field
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: ArrayIndex
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+    startLine: 11
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  summary: A numeric array index, e.g. <code>[0]</code>.
+  example: []
+  syntax:
+    content: ArrayIndex = 1
+    return:
+      type: MRX.Json.Path.JsonPathTokenType
+- uid: MRX.Json.Path.JsonPathTokenType.ArrayStringIndex
+  commentId: F:MRX.Json.Path.JsonPathTokenType.ArrayStringIndex
+  id: ArrayStringIndex
+  parent: MRX.Json.Path.JsonPathTokenType
+  langs:
+  - csharp
+  - vb
+  name: ArrayStringIndex
+  nameWithType: JsonPathTokenType.ArrayStringIndex
+  fullName: MRX.Json.Path.JsonPathTokenType.ArrayStringIndex
+  type: Field
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: ArrayStringIndex
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathTokenType.cs
+    startLine: 14
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  summary: A quoted string array index, e.g. <code>["key"]</code>.
+  example: []
+  syntax:
+    content: ArrayStringIndex = 2
+    return:
+      type: MRX.Json.Path.JsonPathTokenType
+references:
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+- uid: MRX.Json.Path.JsonPathTokenType
+  commentId: T:MRX.Json.Path.JsonPathTokenType
+  parent: MRX.Json.Path
+  href: MRX.Json.Path.JsonPathTokenType.html
+  name: JsonPathTokenType
+  nameWithType: JsonPathTokenType
+  fullName: MRX.Json.Path.JsonPathTokenType

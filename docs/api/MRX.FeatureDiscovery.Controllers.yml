@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery.Controllers
+  commentId: N:MRX.FeatureDiscovery.Controllers
+  id: Controllers
+  parent: MRX.FeatureDiscovery
+  children:
+  - MRX.FeatureDiscovery.Controllers.FeatureDiscoveryController
+  langs:
+  - csharp
+  - vb
+  name: MRX.FeatureDiscovery.Controllers
+  nameWithType: MRX.FeatureDiscovery.Controllers
+  fullName: MRX.FeatureDiscovery.Controllers
+  type: Namespace
+  assemblies:
+  - MRX.FeatureDiscovery
+references:
+- uid: MRX.FeatureDiscovery.Controllers.FeatureDiscoveryController
+  commentId: T:MRX.FeatureDiscovery.Controllers.FeatureDiscoveryController
+  href: MRX.FeatureDiscovery.Controllers.FeatureDiscoveryController.html
+  name: FeatureDiscoveryController
+  nameWithType: FeatureDiscoveryController
+  fullName: MRX.FeatureDiscovery.Controllers.FeatureDiscoveryController

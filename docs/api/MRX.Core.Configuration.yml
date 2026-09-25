@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.Configuration
+  commentId: N:MRX.Core.Configuration
+  id: Configuration
+  parent: MRX.Core
+  children:
+  - MRX.Core.Configuration.MrxConfigurationOptions
+  - MRX.Core.Configuration.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.Configuration
+  nameWithType: MRX.Core.Configuration
+  fullName: MRX.Core.Configuration
+  type: Namespace
+  assemblies:
+  - MRX.Core
+references:
+- uid: MRX.Core.Configuration.MrxConfigurationOptions
+  commentId: T:MRX.Core.Configuration.MrxConfigurationOptions
+  href: MRX.Core.Configuration.MrxConfigurationOptions.html
+  name: MrxConfigurationOptions
+  nameWithType: MrxConfigurationOptions
+  fullName: MRX.Core.Configuration.MrxConfigurationOptions
+- uid: MRX.Core.Configuration.ServiceCollectionExtensions
+  commentId: T:MRX.Core.Configuration.ServiceCollectionExtensions
+  href: MRX.Core.Configuration.ServiceCollectionExtensions.html
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: MRX.Core.Configuration.ServiceCollectionExtensions

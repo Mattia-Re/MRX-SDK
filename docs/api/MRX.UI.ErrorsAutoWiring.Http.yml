@@ -1,0 +1,128 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Http
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http
+  id: Http
+  parent: MRX.UI.ErrorsAutoWiring
+  children:
+  - MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  - MRX.UI.ErrorsAutoWiring.Http.Interop
+  - MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClient
+  - MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+  - MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+  langs:
+  - csharp
+  - vb
+  name: MRX.UI.ErrorsAutoWiring.Http
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http
+  fullName: MRX.UI.ErrorsAutoWiring.Http
+  type: Namespace
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+references:
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http.Interop
+  name: MRX.UI.ErrorsAutoWiring.Http.Interop
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http.Interop
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+    name: Interop
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+    name: Interop
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html
+  name: DataBindingSources
+  nameWithType: DataBindingSources
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+- uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClient
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClient
+  href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClient.html
+  name: ProblemDetailsHttpClient
+  nameWithType: ProblemDetailsHttpClient
+  fullName: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClient
+- uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+  parent: MRX.UI.ErrorsAutoWiring.Http
+  href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.html
+  name: ProblemDetailsHttpClientOptions
+  nameWithType: ProblemDetailsHttpClientOptions
+  fullName: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+- uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+  parent: MRX.UI.ErrorsAutoWiring.Http
+  href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.html
+  name: ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+  nameWithType: ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+  fullName: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+  spec.csharp:
+  - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+    name: ProblemDetailsHttpClientOptions
+    href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.html
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+    name: ErrorMappingFactoryHandler
+    href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler.html
+  spec.vb:
+  - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+    name: ProblemDetailsHttpClientOptions
+    href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.html
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+    name: ErrorMappingFactoryHandler
+    href: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler.html
+- uid: MRX.UI.ErrorsAutoWiring.Http
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http
+  name: MRX.UI.ErrorsAutoWiring.Http
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http
+  fullName: MRX.UI.ErrorsAutoWiring.Http
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http

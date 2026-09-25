@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Reflection.DependencyInjection
+  commentId: N:MRX.Json.Reflection.DependencyInjection
+  id: DependencyInjection
+  parent: MRX.Json.Reflection
+  children:
+  - MRX.Json.Reflection.DependencyInjection.JsonReflectionServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: MRX.Json.Reflection.DependencyInjection
+  nameWithType: MRX.Json.Reflection.DependencyInjection
+  fullName: MRX.Json.Reflection.DependencyInjection
+  type: Namespace
+  assemblies:
+  - MRX.Json.Reflection
+references:
+- uid: MRX.Json.Reflection.DependencyInjection.JsonReflectionServiceCollectionExtensions
+  commentId: T:MRX.Json.Reflection.DependencyInjection.JsonReflectionServiceCollectionExtensions
+  href: MRX.Json.Reflection.DependencyInjection.JsonReflectionServiceCollectionExtensions.html
+  name: JsonReflectionServiceCollectionExtensions
+  nameWithType: JsonReflectionServiceCollectionExtensions
+  fullName: MRX.Json.Reflection.DependencyInjection.JsonReflectionServiceCollectionExtensions

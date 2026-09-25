@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX
+  id: MRX
+  children:
+  - MRX.Core
+  - MRX.FeatureDiscovery
+  - MRX.Json
+  - MRX.Parsing.Reflection
+  - MRX.UI.ErrorsAutoWiring
+  langs:
+  - csharp
+  - vb
+  name: MRX
+  type: Namespace
+references:
+- uid: MRX.Core
+  commentId: N:MRX.Core
+  name: MRX.Core
+  nameWithType: MRX.Core
+  fullName: MRX.Core
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+- uid: MRX.FeatureDiscovery
+  isExternal: true
+- uid: MRX.Json
+  isExternal: true
+- uid: MRX.Parsing.Reflection
+  commentId: N:MRX.Parsing.Reflection
+  name: MRX.Parsing.Reflection
+  nameWithType: MRX.Parsing.Reflection
+  fullName: MRX.Parsing.Reflection
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+- uid: MRX.UI.ErrorsAutoWiring
+  isExternal: true

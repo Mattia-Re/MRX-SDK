@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Parsing.Reflection
+  commentId: N:MRX.Parsing.Reflection
+  id: Parsing.Reflection
+  parent: MRX
+  children:
+  - MRX.Parsing.Reflection.Abstractions
+  - MRX.Parsing.Reflection.NumericParser
+  langs:
+  - csharp
+  - vb
+  name: MRX.Parsing.Reflection
+  nameWithType: MRX.Parsing.Reflection
+  fullName: MRX.Parsing.Reflection
+  type: Namespace
+  assemblies:
+  - MRX.Parsing.Reflection
+references:
+- uid: MRX.Parsing.Reflection.Abstractions
+  commentId: N:MRX.Parsing.Reflection.Abstractions
+  name: MRX.Parsing.Reflection.Abstractions
+  nameWithType: MRX.Parsing.Reflection.Abstractions
+  fullName: MRX.Parsing.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+- uid: MRX.Parsing.Reflection.NumericParser
+  commentId: T:MRX.Parsing.Reflection.NumericParser
+  href: MRX.Parsing.Reflection.NumericParser.html
+  name: NumericParser
+  nameWithType: NumericParser
+  fullName: MRX.Parsing.Reflection.NumericParser

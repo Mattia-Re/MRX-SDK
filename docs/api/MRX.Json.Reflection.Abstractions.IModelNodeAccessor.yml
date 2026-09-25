@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  id: IModelNodeAccessor
+  parent: MRX.Json.Reflection.Abstractions
+  children:
+  - MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  - MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue(System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: IModelNodeAccessor
+  nameWithType: IModelNodeAccessor
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  type: Interface
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelNodeAccessor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: IModelNodeAccessor
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelNodeAccessor.cs
+    startLine: 7
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Resolves a single JSON path token against a model instance, reading the value it refers to.
+  example: []
+  syntax:
+    content: public interface IModelNodeAccessor
+    content.vb: Public Interface IModelNodeAccessor
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  commentId: M:MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  id: CanHandle(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  parent: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  langs:
+  - csharp
+  - vb
+  name: CanHandle(JsonPathTokenType, string, object)
+  nameWithType: IModelNodeAccessor.CanHandle(JsonPathTokenType, string, object)
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle(MRX.Json.Path.JsonPathTokenType, string, object)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelNodeAccessor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: CanHandle
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelNodeAccessor.cs
+    startLine: 16
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Determines whether this accessor is able to resolve <code class="paramref">token</code> against <code class="paramref">container</code>.
+  example: []
+  syntax:
+    content: bool CanHandle(JsonPathTokenType tokenType, string token, object container)
+    parameters:
+    - id: tokenType
+      type: MRX.Json.Path.JsonPathTokenType
+      description: The kind of path token being resolved (property, array index, etc.).
+    - id: token
+      type: System.String
+      description: The raw token text extracted from the JSON path.
+    - id: container
+      type: System.Object
+      description: The object instance the token should be resolved against.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if this accessor can handle the token; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Function CanHandle(tokenType As JsonPathTokenType, token As String, container As Object) As Boolean
+  overload: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle*
+  nameWithType.vb: IModelNodeAccessor.CanHandle(JsonPathTokenType, String, Object)
+  fullName.vb: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle(MRX.Json.Path.JsonPathTokenType, String, Object)
+  name.vb: CanHandle(JsonPathTokenType, String, Object)
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue(System.String,System.Object)
+  commentId: M:MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue(System.String,System.Object)
+  id: GetValue(System.String,System.Object)
+  parent: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  langs:
+  - csharp
+  - vb
+  name: GetValue(string, object)
+  nameWithType: IModelNodeAccessor.GetValue(string, object)
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue(string, object)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelNodeAccessor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: GetValue
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelNodeAccessor.cs
+    startLine: 24
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Resolves the value referred to by <code class="paramref">token</code> on <code class="paramref">container</code>.
+  example: []
+  syntax:
+    content: object? GetValue(string token, object container)
+    parameters:
+    - id: token
+      type: System.String
+      description: The raw token text extracted from the JSON path.
+    - id: container
+      type: System.Object
+      description: The object instance to read the value from.
+    return:
+      type: System.Object
+      description: The resolved value, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the token does not refer to a value.
+    content.vb: Function GetValue(token As String, container As Object) As Object
+  overload: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue*
+  nameWithType.vb: IModelNodeAccessor.GetValue(String, Object)
+  fullName.vb: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue(String, Object)
+  name.vb: GetValue(String, Object)
+references:
+- uid: MRX.Json.Reflection.Abstractions
+  commentId: N:MRX.Json.Reflection.Abstractions
+  name: MRX.Json.Reflection.Abstractions
+  nameWithType: MRX.Json.Reflection.Abstractions
+  fullName: MRX.Json.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle*
+  commentId: Overload:MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle
+  href: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.html#MRX_Json_Reflection_Abstractions_IModelNodeAccessor_CanHandle_MRX_Json_Path_JsonPathTokenType_System_String_System_Object_
+  name: CanHandle
+  nameWithType: IModelNodeAccessor.CanHandle
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.CanHandle
+- uid: MRX.Json.Path.JsonPathTokenType
+  commentId: T:MRX.Json.Path.JsonPathTokenType
+  parent: MRX.Json.Path
+  href: MRX.Json.Path.JsonPathTokenType.html
+  name: JsonPathTokenType
+  nameWithType: JsonPathTokenType
+  fullName: MRX.Json.Path.JsonPathTokenType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue*
+  commentId: Overload:MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue
+  href: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.html#MRX_Json_Reflection_Abstractions_IModelNodeAccessor_GetValue_System_String_System_Object_
+  name: GetValue
+  nameWithType: IModelNodeAccessor.GetValue
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.GetValue

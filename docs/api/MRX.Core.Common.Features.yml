@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.Common.Features
+  commentId: N:MRX.Core.Common.Features
+  id: Features
+  parent: MRX.Core.Common
+  children:
+  - MRX.Core.Common.Features.MrxEndpointFeatures
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.Common.Features
+  nameWithType: MRX.Core.Common.Features
+  fullName: MRX.Core.Common.Features
+  type: Namespace
+  assemblies:
+  - MRX.Core.Common
+references:
+- uid: MRX.Core.Common.Features.MrxEndpointFeatures
+  commentId: T:MRX.Core.Common.Features.MrxEndpointFeatures
+  href: MRX.Core.Common.Features.MrxEndpointFeatures.html
+  name: MrxEndpointFeatures
+  nameWithType: MrxEndpointFeatures
+  fullName: MRX.Core.Common.Features.MrxEndpointFeatures

@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.ModelBinding
+  commentId: N:MRX.Core.ModelBinding
+  id: ModelBinding
+  parent: MRX.Core
+  children:
+  - MRX.Core.ModelBinding.Attributes
+  - MRX.Core.ModelBinding.ModelBindingConfigurationExtensions
+  - MRX.Core.ModelBinding.ModelBindingOptions
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.ModelBinding
+  nameWithType: MRX.Core.ModelBinding
+  fullName: MRX.Core.ModelBinding
+  type: Namespace
+  assemblies:
+  - MRX.Core
+references:
+- uid: MRX.Core.ModelBinding.Attributes
+  commentId: N:MRX.Core.ModelBinding.Attributes
+  name: MRX.Core.ModelBinding.Attributes
+  nameWithType: MRX.Core.ModelBinding.Attributes
+  fullName: MRX.Core.ModelBinding.Attributes
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.ModelBinding
+    name: ModelBinding
+  - name: .
+  - uid: MRX.Core.ModelBinding.Attributes
+    name: Attributes
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.ModelBinding
+    name: ModelBinding
+  - name: .
+  - uid: MRX.Core.ModelBinding.Attributes
+    name: Attributes
+- uid: MRX.Core.ModelBinding.ModelBindingConfigurationExtensions
+  commentId: T:MRX.Core.ModelBinding.ModelBindingConfigurationExtensions
+  href: MRX.Core.ModelBinding.ModelBindingConfigurationExtensions.html
+  name: ModelBindingConfigurationExtensions
+  nameWithType: ModelBindingConfigurationExtensions
+  fullName: MRX.Core.ModelBinding.ModelBindingConfigurationExtensions
+- uid: MRX.Core.ModelBinding.ModelBindingOptions
+  commentId: T:MRX.Core.ModelBinding.ModelBindingOptions
+  href: MRX.Core.ModelBinding.ModelBindingOptions.html
+  name: ModelBindingOptions
+  nameWithType: ModelBindingOptions
+  fullName: MRX.Core.ModelBinding.ModelBindingOptions

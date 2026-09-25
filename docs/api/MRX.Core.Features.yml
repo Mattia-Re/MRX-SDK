@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.Features
+  commentId: N:MRX.Core.Features
+  id: Features
+  parent: MRX.Core
+  children:
+  - MRX.Core.Features.IFeatureDescriptor
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.Features
+  nameWithType: MRX.Core.Features
+  fullName: MRX.Core.Features
+  type: Namespace
+  assemblies:
+  - MRX.Core
+references:
+- uid: MRX.Core.Features.IFeatureDescriptor
+  commentId: T:MRX.Core.Features.IFeatureDescriptor
+  parent: MRX.Core.Features
+  href: MRX.Core.Features.IFeatureDescriptor.html
+  name: IFeatureDescriptor
+  nameWithType: IFeatureDescriptor
+  fullName: MRX.Core.Features.IFeatureDescriptor
+- uid: MRX.Core.Features
+  commentId: N:MRX.Core.Features
+  name: MRX.Core.Features
+  nameWithType: MRX.Core.Features
+  fullName: MRX.Core.Features
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Features
+    name: Features
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Features
+    name: Features

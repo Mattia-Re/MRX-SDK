@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery
+  id: FeatureDiscovery
+  parent: MRX
+  children:
+  - MRX.FeatureDiscovery.Common
+  - MRX.FeatureDiscovery.Controllers
+  - MRX.FeatureDiscovery.DependencyInjection
+  - MRX.FeatureDiscovery.RouteProbing
+  langs:
+  - csharp
+  - vb
+  name: MRX.FeatureDiscovery
+  type: Namespace
+references:
+- uid: MRX.FeatureDiscovery.Common
+  commentId: N:MRX.FeatureDiscovery.Common
+  name: MRX.FeatureDiscovery.Common
+  nameWithType: MRX.FeatureDiscovery.Common
+  fullName: MRX.FeatureDiscovery.Common
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.Common
+    name: Common
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.Common
+    name: Common
+- uid: MRX.FeatureDiscovery.Controllers
+  commentId: N:MRX.FeatureDiscovery.Controllers
+  name: MRX.FeatureDiscovery.Controllers
+  nameWithType: MRX.FeatureDiscovery.Controllers
+  fullName: MRX.FeatureDiscovery.Controllers
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.Controllers
+    name: Controllers
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.Controllers
+    name: Controllers
+- uid: MRX.FeatureDiscovery.DependencyInjection
+  commentId: N:MRX.FeatureDiscovery.DependencyInjection
+  name: MRX.FeatureDiscovery.DependencyInjection
+  nameWithType: MRX.FeatureDiscovery.DependencyInjection
+  fullName: MRX.FeatureDiscovery.DependencyInjection
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.DependencyInjection
+    name: DependencyInjection
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.DependencyInjection
+    name: DependencyInjection
+- uid: MRX.FeatureDiscovery.RouteProbing
+  commentId: N:MRX.FeatureDiscovery.RouteProbing
+  name: MRX.FeatureDiscovery.RouteProbing
+  nameWithType: MRX.FeatureDiscovery.RouteProbing
+  fullName: MRX.FeatureDiscovery.RouteProbing
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing

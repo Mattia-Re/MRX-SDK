@@ -8,15 +8,30 @@ using MRX.Core.ModelBinding.Validation;
 
 namespace MRX.Core.ModelBinding;
 
+/// <summary>
+///     Provides extension methods for configuring ADR-001 compliant model binding validation on an
+///     <see cref="IServiceCollection" />.
+/// </summary>
 public static class ModelBindingConfigurationExtensions
 {
     extension(IServiceCollection services)
     {
+        /// <summary>
+        ///     Configures ADR-001 compliant model binding validation using default options.
+        /// </summary>
+        /// <returns>The same <see cref="IServiceCollection" /> so that calls can be chained.</returns>
         public IServiceCollection ConfigureMrxModelBindingValidation()
         {
             return services.ConfigureMrxModelBindingValidation(_ => { });
         }
 
+        /// <summary>
+        ///     Configures ADR-001 compliant model binding validation: replaces the default <see cref="IObjectModelValidator" />
+        ///     with <see cref="MrxObjectModelValidator" /> and installs an <see cref="ApiBehaviorOptions.InvalidModelStateResponseFactory" />
+        ///     that converts validation errors into <see cref="CodedError" /> instances.
+        /// </summary>
+        /// <param name="configureOptions">A delegate used to configure the <see cref="ModelBindingOptions" />.</param>
+        /// <returns>The same <see cref="IServiceCollection" /> so that calls can be chained.</returns>
         public IServiceCollection ConfigureMrxModelBindingValidation(Action<ModelBindingOptions> configureOptions)
         {
             // Setup options

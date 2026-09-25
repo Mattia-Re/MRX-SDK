@@ -1,0 +1,392 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  commentId: T:MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  id: IErrorMappingFactory
+  parent: MRX.UI.ErrorsAutoWiring.Abstractions
+  children:
+  - MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap(Microsoft.AspNetCore.Components.Forms.EditContext,System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]},System.Net.Http.HttpResponseMessage)
+  langs:
+  - csharp
+  - vb
+  name: IErrorMappingFactory
+  nameWithType: IErrorMappingFactory
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  type: Interface
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Abstractions/IErrorMappingFactory.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: IErrorMappingFactory
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Abstractions/IErrorMappingFactory.cs
+    startLine: 8
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Abstractions
+  summary: Maps coded errors returned by an HTTP response to the fields of the model bound to an <xref href="Microsoft.AspNetCore.Components.Forms.EditContext" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public interface IErrorMappingFactory
+    content.vb: Public Interface IErrorMappingFactory
+  derivedClasses:
+  - MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap(Microsoft.AspNetCore.Components.Forms.EditContext,System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]},System.Net.Http.HttpResponseMessage)
+  commentId: M:MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap(Microsoft.AspNetCore.Components.Forms.EditContext,System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]},System.Net.Http.HttpResponseMessage)
+  id: CreateErrorFieldMap(Microsoft.AspNetCore.Components.Forms.EditContext,System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]},System.Net.Http.HttpResponseMessage)
+  parent: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateErrorFieldMap(EditContext, Dictionary<string, CodedError[]>, HttpResponseMessage)
+  nameWithType: IErrorMappingFactory.CreateErrorFieldMap(EditContext, Dictionary<string, CodedError[]>, HttpResponseMessage)
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap(Microsoft.AspNetCore.Components.Forms.EditContext, System.Collections.Generic.Dictionary<string, MRX.Core.Common.ModelBinding.CodedError[]>, System.Net.Http.HttpResponseMessage)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Abstractions/IErrorMappingFactory.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: CreateErrorFieldMap
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Abstractions/IErrorMappingFactory.cs
+    startLine: 17
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Abstractions
+  summary: Builds a map of field identifiers to their associated coded errors.
+  example: []
+  syntax:
+    content: Dictionary<FieldIdentifier, List<CodedError>> CreateErrorFieldMap(EditContext editContext, Dictionary<string, CodedError[]> errors, HttpResponseMessage response)
+    parameters:
+    - id: editContext
+      type: Microsoft.AspNetCore.Components.Forms.EditContext
+      description: The edit context whose model the errors should be mapped against.
+    - id: errors
+      type: System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]}
+      description: The coded errors, keyed by the server-provided error key.
+    - id: response
+      type: System.Net.Http.HttpResponseMessage
+      description: The HTTP response the errors were extracted from.
+    return:
+      type: System.Collections.Generic.Dictionary{Microsoft.AspNetCore.Components.Forms.FieldIdentifier,System.Collections.Generic.List{MRX.Core.Common.ModelBinding.CodedError}}
+      description: A dictionary linking each resolved field identifier to the list of errors that apply to it.
+    content.vb: Function CreateErrorFieldMap(editContext As EditContext, errors As Dictionary(Of String, CodedError()), response As HttpResponseMessage) As Dictionary(Of FieldIdentifier, List(Of CodedError))
+  overload: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap*
+  nameWithType.vb: IErrorMappingFactory.CreateErrorFieldMap(EditContext, Dictionary(Of String, CodedError()), HttpResponseMessage)
+  fullName.vb: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap(Microsoft.AspNetCore.Components.Forms.EditContext, System.Collections.Generic.Dictionary(Of String, MRX.Core.Common.ModelBinding.CodedError()), System.Net.Http.HttpResponseMessage)
+  name.vb: CreateErrorFieldMap(EditContext, Dictionary(Of String, CodedError()), HttpResponseMessage)
+references:
+- uid: Microsoft.AspNetCore.Components.Forms.EditContext
+  commentId: T:Microsoft.AspNetCore.Components.Forms.EditContext
+  parent: Microsoft.AspNetCore.Components.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms.editcontext
+  name: EditContext
+  nameWithType: EditContext
+  fullName: Microsoft.AspNetCore.Components.Forms.EditContext
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions
+  commentId: N:MRX.UI.ErrorsAutoWiring.Abstractions
+  name: MRX.UI.ErrorsAutoWiring.Abstractions
+  nameWithType: MRX.UI.ErrorsAutoWiring.Abstractions
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+    name: Abstractions
+- uid: Microsoft.AspNetCore.Components.Forms
+  commentId: N:Microsoft.AspNetCore.Components.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Components.Forms
+  nameWithType: Microsoft.AspNetCore.Components.Forms
+  fullName: Microsoft.AspNetCore.Components.Forms
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+  - name: .
+  - uid: Microsoft.AspNetCore.Components.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+  - name: .
+  - uid: Microsoft.AspNetCore.Components.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap*
+  commentId: Overload:MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap
+  href: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.html#MRX_UI_ErrorsAutoWiring_Abstractions_IErrorMappingFactory_CreateErrorFieldMap_Microsoft_AspNetCore_Components_Forms_EditContext_System_Collections_Generic_Dictionary_System_String_MRX_Core_Common_ModelBinding_CodedError____System_Net_Http_HttpResponseMessage_
+  name: CreateErrorFieldMap
+  nameWithType: IErrorMappingFactory.CreateErrorFieldMap
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory.CreateErrorFieldMap
+- uid: System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, CodedError[]>
+  nameWithType: Dictionary<string, CodedError[]>
+  fullName: System.Collections.Generic.Dictionary<string, MRX.Core.Common.ModelBinding.CodedError[]>
+  nameWithType.vb: Dictionary(Of String, CodedError())
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, MRX.Core.Common.ModelBinding.CodedError())
+  name.vb: Dictionary(Of String, CodedError())
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: MRX.Core.Common.ModelBinding.CodedError
+    name: CodedError
+    href: MRX.Core.Common.ModelBinding.CodedError.html
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: MRX.Core.Common.ModelBinding.CodedError
+    name: CodedError
+    href: MRX.Core.Common.ModelBinding.CodedError.html
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Net.Http.HttpResponseMessage
+  commentId: T:System.Net.Http.HttpResponseMessage
+  parent: System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.http.httpresponsemessage
+  name: HttpResponseMessage
+  nameWithType: HttpResponseMessage
+  fullName: System.Net.Http.HttpResponseMessage
+- uid: System.Collections.Generic.Dictionary{Microsoft.AspNetCore.Components.Forms.FieldIdentifier,System.Collections.Generic.List{MRX.Core.Common.ModelBinding.CodedError}}
+  commentId: T:System.Collections.Generic.Dictionary{Microsoft.AspNetCore.Components.Forms.FieldIdentifier,System.Collections.Generic.List{MRX.Core.Common.ModelBinding.CodedError}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<FieldIdentifier, List<CodedError>>
+  nameWithType: Dictionary<FieldIdentifier, List<CodedError>>
+  fullName: System.Collections.Generic.Dictionary<Microsoft.AspNetCore.Components.Forms.FieldIdentifier, System.Collections.Generic.List<MRX.Core.Common.ModelBinding.CodedError>>
+  nameWithType.vb: Dictionary(Of FieldIdentifier, List(Of CodedError))
+  fullName.vb: System.Collections.Generic.Dictionary(Of Microsoft.AspNetCore.Components.Forms.FieldIdentifier, System.Collections.Generic.List(Of MRX.Core.Common.ModelBinding.CodedError))
+  name.vb: Dictionary(Of FieldIdentifier, List(Of CodedError))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: Microsoft.AspNetCore.Components.Forms.FieldIdentifier
+    name: FieldIdentifier
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms.fieldidentifier
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: MRX.Core.Common.ModelBinding.CodedError
+    name: CodedError
+    href: MRX.Core.Common.ModelBinding.CodedError.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Microsoft.AspNetCore.Components.Forms.FieldIdentifier
+    name: FieldIdentifier
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms.fieldidentifier
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MRX.Core.Common.ModelBinding.CodedError
+    name: CodedError
+    href: MRX.Core.Common.ModelBinding.CodedError.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Http
+    name: Http
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.http

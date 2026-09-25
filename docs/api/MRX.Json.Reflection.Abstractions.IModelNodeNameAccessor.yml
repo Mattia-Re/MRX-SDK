@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  id: IModelNodeNameAccessor
+  parent: MRX.Json.Reflection.Abstractions
+  children:
+  - MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName(System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: IModelNodeNameAccessor
+  nameWithType: IModelNodeNameAccessor
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  type: Interface
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelNodeNameAccessor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: IModelNodeNameAccessor
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelNodeNameAccessor.cs
+    startLine: 5
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Resolves the canonical member name that a JSON path token maps to on a model instance.
+  example: []
+  syntax:
+    content: public interface IModelNodeNameAccessor
+    content.vb: Public Interface IModelNodeNameAccessor
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName(System.String,System.Object)
+  commentId: M:MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName(System.String,System.Object)
+  id: GetNodeName(System.String,System.Object)
+  parent: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  langs:
+  - csharp
+  - vb
+  name: GetNodeName(string, object)
+  nameWithType: IModelNodeNameAccessor.GetNodeName(string, object)
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName(string, object)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelNodeNameAccessor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: GetNodeName
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelNodeNameAccessor.cs
+    startLine: 13
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Gets the canonical name of the member that <code class="paramref">token</code> refers to on <code class="paramref">container</code>.
+  example: []
+  syntax:
+    content: string? GetNodeName(string token, object container)
+    parameters:
+    - id: token
+      type: System.String
+      description: The raw token text extracted from the JSON path.
+    - id: container
+      type: System.Object
+      description: The object instance the token should be resolved against.
+    return:
+      type: System.String
+      description: The canonical member name, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if it cannot be resolved.
+    content.vb: Function GetNodeName(token As String, container As Object) As String
+  overload: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName*
+  nameWithType.vb: IModelNodeNameAccessor.GetNodeName(String, Object)
+  fullName.vb: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName(String, Object)
+  name.vb: GetNodeName(String, Object)
+references:
+- uid: MRX.Json.Reflection.Abstractions
+  commentId: N:MRX.Json.Reflection.Abstractions
+  name: MRX.Json.Reflection.Abstractions
+  nameWithType: MRX.Json.Reflection.Abstractions
+  fullName: MRX.Json.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName*
+  commentId: Overload:MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName
+  href: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.html#MRX_Json_Reflection_Abstractions_IModelNodeNameAccessor_GetNodeName_System_String_System_Object_
+  name: GetNodeName
+  nameWithType: IModelNodeNameAccessor.GetNodeName
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.GetNodeName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

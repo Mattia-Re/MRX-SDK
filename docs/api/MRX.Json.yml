@@ -1,0 +1,39 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json
+  id: Json
+  parent: MRX
+  children:
+  - MRX.Json.Path
+  - MRX.Json.Reflection
+  langs:
+  - csharp
+  - vb
+  name: MRX.Json
+  type: Namespace
+references:
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+- uid: MRX.Json.Reflection
+  isExternal: true

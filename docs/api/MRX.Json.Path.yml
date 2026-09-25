@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  id: Path
+  parent: MRX.Json
+  children:
+  - MRX.Json.Path.JsonPathMatching
+  - MRX.Json.Path.JsonPathToken
+  - MRX.Json.Path.JsonPathTokenType
+  - MRX.Json.Path.JsonPathWalker
+  langs:
+  - csharp
+  - vb
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  type: Namespace
+  assemblies:
+  - MRX.Json
+references:
+- uid: MRX.Json.Path.JsonPathMatching
+  commentId: T:MRX.Json.Path.JsonPathMatching
+  href: MRX.Json.Path.JsonPathMatching.html
+  name: JsonPathMatching
+  nameWithType: JsonPathMatching
+  fullName: MRX.Json.Path.JsonPathMatching
+- uid: MRX.Json.Path.JsonPathToken
+  commentId: T:MRX.Json.Path.JsonPathToken
+  parent: MRX.Json.Path
+  href: MRX.Json.Path.JsonPathToken.html
+  name: JsonPathToken
+  nameWithType: JsonPathToken
+  fullName: MRX.Json.Path.JsonPathToken
+- uid: MRX.Json.Path.JsonPathTokenType
+  commentId: T:MRX.Json.Path.JsonPathTokenType
+  parent: MRX.Json.Path
+  href: MRX.Json.Path.JsonPathTokenType.html
+  name: JsonPathTokenType
+  nameWithType: JsonPathTokenType
+  fullName: MRX.Json.Path.JsonPathTokenType
+- uid: MRX.Json.Path.JsonPathWalker
+  commentId: T:MRX.Json.Path.JsonPathWalker
+  href: MRX.Json.Path.JsonPathWalker.html
+  name: JsonPathWalker
+  nameWithType: JsonPathWalker
+  fullName: MRX.Json.Path.JsonPathWalker
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path

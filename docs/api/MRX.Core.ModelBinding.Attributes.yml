@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.ModelBinding.Attributes
+  commentId: N:MRX.Core.ModelBinding.Attributes
+  id: Attributes
+  parent: MRX.Core.ModelBinding
+  children:
+  - MRX.Core.ModelBinding.Attributes.DisambiguateAttribute
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.ModelBinding.Attributes
+  nameWithType: MRX.Core.ModelBinding.Attributes
+  fullName: MRX.Core.ModelBinding.Attributes
+  type: Namespace
+  assemblies:
+  - MRX.Core
+references:
+- uid: MRX.Core.ModelBinding.Attributes.DisambiguateAttribute
+  commentId: T:MRX.Core.ModelBinding.Attributes.DisambiguateAttribute
+  href: MRX.Core.ModelBinding.Attributes.DisambiguateAttribute.html
+  name: DisambiguateAttribute
+  nameWithType: DisambiguateAttribute
+  fullName: MRX.Core.ModelBinding.Attributes.DisambiguateAttribute

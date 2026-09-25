@@ -1,0 +1,31 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  commentId: N:MRX.UI.ErrorsAutoWiring.DependencyInjection
+  id: DependencyInjection
+  parent: MRX.UI.ErrorsAutoWiring
+  children:
+  - MRX.UI.ErrorsAutoWiring.DependencyInjection.ErrorsAutoWiringServiceCollectionExtensions
+  - MRX.UI.ErrorsAutoWiring.DependencyInjection.ProblemDetailsHttpClientOptionsSetup
+  langs:
+  - csharp
+  - vb
+  name: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  nameWithType: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  fullName: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  type: Namespace
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+references:
+- uid: MRX.UI.ErrorsAutoWiring.DependencyInjection.ErrorsAutoWiringServiceCollectionExtensions
+  commentId: T:MRX.UI.ErrorsAutoWiring.DependencyInjection.ErrorsAutoWiringServiceCollectionExtensions
+  href: MRX.UI.ErrorsAutoWiring.DependencyInjection.ErrorsAutoWiringServiceCollectionExtensions.html
+  name: ErrorsAutoWiringServiceCollectionExtensions
+  nameWithType: ErrorsAutoWiringServiceCollectionExtensions
+  fullName: MRX.UI.ErrorsAutoWiring.DependencyInjection.ErrorsAutoWiringServiceCollectionExtensions
+- uid: MRX.UI.ErrorsAutoWiring.DependencyInjection.ProblemDetailsHttpClientOptionsSetup
+  commentId: T:MRX.UI.ErrorsAutoWiring.DependencyInjection.ProblemDetailsHttpClientOptionsSetup
+  href: MRX.UI.ErrorsAutoWiring.DependencyInjection.ProblemDetailsHttpClientOptionsSetup.html
+  name: ProblemDetailsHttpClientOptionsSetup
+  nameWithType: ProblemDetailsHttpClientOptionsSetup
+  fullName: MRX.UI.ErrorsAutoWiring.DependencyInjection.ProblemDetailsHttpClientOptionsSetup

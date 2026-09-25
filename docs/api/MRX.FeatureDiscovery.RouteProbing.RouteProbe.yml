@@ -1,0 +1,521 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  commentId: T:MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  id: RouteProbe
+  parent: MRX.FeatureDiscovery.RouteProbing
+  children:
+  - MRX.FeatureDiscovery.RouteProbing.RouteProbe.#ctor(Microsoft.AspNetCore.Routing.EndpointDataSource)
+  - MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache
+  langs:
+  - csharp
+  - vb
+  name: RouteProbe
+  nameWithType: RouteProbe
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  type: Class
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/RouteProbe.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: RouteProbe
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/RouteProbe.cs
+    startLine: 12
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: Service for discovering routes by path and method.
+  example: []
+  syntax:
+    content: public class RouteProbe
+    content.vb: Public Class RouteProbe
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.#ctor(Microsoft.AspNetCore.Routing.EndpointDataSource)
+  commentId: M:MRX.FeatureDiscovery.RouteProbing.RouteProbe.#ctor(Microsoft.AspNetCore.Routing.EndpointDataSource)
+  id: '#ctor(Microsoft.AspNetCore.Routing.EndpointDataSource)'
+  parent: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  langs:
+  - csharp
+  - vb
+  name: RouteProbe(EndpointDataSource)
+  nameWithType: RouteProbe.RouteProbe(EndpointDataSource)
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe.RouteProbe(Microsoft.AspNetCore.Routing.EndpointDataSource)
+  type: Constructor
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/RouteProbe.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: .ctor
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/RouteProbe.cs
+    startLine: 12
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: Service for discovering routes by path and method.
+  example: []
+  syntax:
+    content: public RouteProbe(EndpointDataSource endpointDataSource)
+    parameters:
+    - id: endpointDataSource
+      type: Microsoft.AspNetCore.Routing.EndpointDataSource
+    content.vb: Public Sub New(endpointDataSource As EndpointDataSource)
+  overload: MRX.FeatureDiscovery.RouteProbing.RouteProbe.#ctor*
+  nameWithType.vb: RouteProbe.New(EndpointDataSource)
+  fullName.vb: MRX.FeatureDiscovery.RouteProbing.RouteProbe.New(Microsoft.AspNetCore.Routing.EndpointDataSource)
+  name.vb: New(EndpointDataSource)
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache
+  commentId: P:MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache
+  id: MatchedRoutesCache
+  parent: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+  langs:
+  - csharp
+  - vb
+  name: MatchedRoutesCache
+  nameWithType: RouteProbe.MatchedRoutesCache
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache
+  type: Property
+  source:
+    remote:
+      path: src/MRX.FeatureDiscovery/src/RouteProbing/RouteProbe.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: MatchedRoutesCache
+    path: ../src/MRX.FeatureDiscovery/src/RouteProbing/RouteProbe.cs
+    startLine: 18
+  assemblies:
+  - MRX.FeatureDiscovery
+  namespace: MRX.FeatureDiscovery.RouteProbing
+  summary: >-
+    Lazily-initialized cache of all discovered application routes, populated on first access by
+
+    <xref href="MRX.FeatureDiscovery.RouteProbing.RouteProbe.LazyLoadRoutes" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public Lazy<List<MatchedRoute>> MatchedRoutesCache { get; }
+    parameters: []
+    return:
+      type: System.Lazy{System.Collections.Generic.List{MRX.FeatureDiscovery.RouteProbing.MatchedRoute}}
+    content.vb: Public ReadOnly Property MatchedRoutesCache As Lazy(Of List(Of MatchedRoute))
+  overload: MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache*
+references:
+- uid: MRX.FeatureDiscovery.RouteProbing
+  commentId: N:MRX.FeatureDiscovery.RouteProbing
+  name: MRX.FeatureDiscovery.RouteProbing
+  nameWithType: MRX.FeatureDiscovery.RouteProbing
+  fullName: MRX.FeatureDiscovery.RouteProbing
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+  - name: .
+  - uid: MRX.FeatureDiscovery.RouteProbing
+    name: RouteProbing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.#ctor*
+  commentId: Overload:MRX.FeatureDiscovery.RouteProbing.RouteProbe.#ctor
+  href: MRX.FeatureDiscovery.RouteProbing.RouteProbe.html#MRX_FeatureDiscovery_RouteProbing_RouteProbe__ctor_Microsoft_AspNetCore_Routing_EndpointDataSource_
+  name: RouteProbe
+  nameWithType: RouteProbe.RouteProbe
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe.RouteProbe
+  nameWithType.vb: RouteProbe.New
+  fullName.vb: MRX.FeatureDiscovery.RouteProbing.RouteProbe.New
+  name.vb: New
+- uid: Microsoft.AspNetCore.Routing.EndpointDataSource
+  commentId: T:Microsoft.AspNetCore.Routing.EndpointDataSource
+  parent: Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing.endpointdatasource
+  name: EndpointDataSource
+  nameWithType: EndpointDataSource
+  fullName: Microsoft.AspNetCore.Routing.EndpointDataSource
+- uid: Microsoft.AspNetCore.Routing
+  commentId: N:Microsoft.AspNetCore.Routing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Routing
+  nameWithType: Microsoft.AspNetCore.Routing
+  fullName: Microsoft.AspNetCore.Routing
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Routing
+    name: Routing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.routing
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.LazyLoadRoutes
+  commentId: M:MRX.FeatureDiscovery.RouteProbing.RouteProbe.LazyLoadRoutes
+  name: LazyLoadRoutes()
+  nameWithType: RouteProbe.LazyLoadRoutes()
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe.LazyLoadRoutes()
+  spec.csharp:
+  - uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.LazyLoadRoutes
+    name: LazyLoadRoutes
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.LazyLoadRoutes
+    name: LazyLoadRoutes
+  - name: (
+  - name: )
+- uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache*
+  commentId: Overload:MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache
+  href: MRX.FeatureDiscovery.RouteProbing.RouteProbe.html#MRX_FeatureDiscovery_RouteProbing_RouteProbe_MatchedRoutesCache
+  name: MatchedRoutesCache
+  nameWithType: RouteProbe.MatchedRoutesCache
+  fullName: MRX.FeatureDiscovery.RouteProbing.RouteProbe.MatchedRoutesCache
+- uid: System.Lazy{System.Collections.Generic.List{MRX.FeatureDiscovery.RouteProbing.MatchedRoute}}
+  commentId: T:System.Lazy{System.Collections.Generic.List{MRX.FeatureDiscovery.RouteProbing.MatchedRoute}}
+  parent: System
+  definition: System.Lazy`1
+  href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  name: Lazy<List<MatchedRoute>>
+  nameWithType: Lazy<List<MatchedRoute>>
+  fullName: System.Lazy<System.Collections.Generic.List<MRX.FeatureDiscovery.RouteProbing.MatchedRoute>>
+  nameWithType.vb: Lazy(Of List(Of MatchedRoute))
+  fullName.vb: System.Lazy(Of System.Collections.Generic.List(Of MRX.FeatureDiscovery.RouteProbing.MatchedRoute))
+  name.vb: Lazy(Of List(Of MatchedRoute))
+  spec.csharp:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+    name: MatchedRoute
+    href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+    name: MatchedRoute
+    href: MRX.FeatureDiscovery.RouteProbing.MatchedRoute.html
+  - name: )
+  - name: )
+- uid: System.Lazy`1
+  commentId: T:System.Lazy`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  name: Lazy<T>
+  nameWithType: Lazy<T>
+  fullName: System.Lazy<T>
+  nameWithType.vb: Lazy(Of T)
+  fullName.vb: System.Lazy(Of T)
+  name.vb: Lazy(Of T)
+  spec.csharp:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

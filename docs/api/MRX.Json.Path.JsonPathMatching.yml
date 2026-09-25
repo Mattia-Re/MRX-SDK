@@ -1,0 +1,490 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Path.JsonPathMatching
+  commentId: T:MRX.Json.Path.JsonPathMatching
+  id: JsonPathMatching
+  parent: MRX.Json.Path
+  children:
+  - MRX.Json.Path.JsonPathMatching.JsonPathKeys
+  - MRX.Json.Path.JsonPathMatching.JsonPathTokens
+  langs:
+  - csharp
+  - vb
+  name: JsonPathMatching
+  nameWithType: JsonPathMatching
+  fullName: MRX.Json.Path.JsonPathMatching
+  type: Class
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathMatching.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: JsonPathMatching
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathMatching.cs
+    startLine: 7
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  summary: Provides compiled regular expressions used to tokenize JSON paths.
+  example: []
+  syntax:
+    content: public static class JsonPathMatching
+    content.vb: Public Module JsonPathMatching
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MRX.Json.Path.JsonPathMatching.JsonPathKeys
+  commentId: M:MRX.Json.Path.JsonPathMatching.JsonPathKeys
+  id: JsonPathKeys
+  parent: MRX.Json.Path.JsonPathMatching
+  langs:
+  - csharp
+  - vb
+  name: JsonPathKeys()
+  nameWithType: JsonPathMatching.JsonPathKeys()
+  fullName: MRX.Json.Path.JsonPathMatching.JsonPathKeys()
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathMatching.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: JsonPathKeys
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathMatching.cs
+    startLine: 12
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  remarks: >-
+    Pattern:<br />
+
+
+    <pre><code class="lang-csharp">\\w+</code></pre>
+
+
+    <br />
+
+    Explanation:<br />
+
+
+    <pre><code class="lang-csharp">○ Match a word character atomically at least once.</code></pre>
+  example: []
+  syntax:
+    content: >-
+      [GeneratedRegex("\\w+", RegexOptions.None, 1000)]
+
+      public static Regex JsonPathKeys()
+    return:
+      type: System.Text.RegularExpressions.Regex
+    content.vb: >-
+      <GeneratedRegex("\w+", RegexOptions.None, 1000)>
+
+      Public Shared Function JsonPathKeys() As Regex
+  overload: MRX.Json.Path.JsonPathMatching.JsonPathKeys*
+  attributes:
+  - type: System.Text.RegularExpressions.GeneratedRegexAttribute
+    ctor: System.Text.RegularExpressions.GeneratedRegexAttribute.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,System.Int32)
+    arguments:
+    - type: System.String
+      value: \w+
+    - type: System.Text.RegularExpressions.RegexOptions
+      value: 0
+    - type: System.Int32
+      value: 1000
+- uid: MRX.Json.Path.JsonPathMatching.JsonPathTokens
+  commentId: M:MRX.Json.Path.JsonPathMatching.JsonPathTokens
+  id: JsonPathTokens
+  parent: MRX.Json.Path.JsonPathMatching
+  langs:
+  - csharp
+  - vb
+  name: JsonPathTokens()
+  nameWithType: JsonPathMatching.JsonPathTokens()
+  fullName: MRX.Json.Path.JsonPathMatching.JsonPathTokens()
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Json/src/MRX.Json/Path/JsonPathMatching.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: JsonPathTokens
+    path: ../src/MRX.Json/src/MRX.Json/Path/JsonPathMatching.cs
+    startLine: 20
+  assemblies:
+  - MRX.Json
+  namespace: MRX.Json.Path
+  remarks: >-
+    Pattern:<br />
+
+
+    <pre><code class="lang-csharp">(?&lt;property&gt;\\w+)|\\[(?:(?&lt;quote&gt;["'])(?&lt;str_idx&gt;.+)\\k&lt;quote&gt;|(?&lt;num_idx&gt;\\d+))\\]</code></pre>
+
+
+    <br />
+
+    Explanation:<br />
+
+
+    <pre><code class="lang-csharp">○ Match with 2 alternative expressions, atomically.
+        ○ "property" capture group.
+            ○ Match a word character atomically at least once.
+        ○ Match a sequence of expressions.
+            ○ Match '['.
+            ○ Match with 2 alternative expressions.
+                ○ Match a sequence of expressions.
+                    ○ "quote" capture group.
+                        ○ Match a character in the set ["'].
+                    ○ "str_idx" capture group.
+                        ○ Match a character other than '\n' greedily at least once.
+                    ○ Match the same text as matched by the "quote" capture group.
+                ○ "num_idx" capture group.
+                    ○ Match a Unicode digit atomically at least once.
+            ○ Match ']'.</code></pre>
+  example: []
+  syntax:
+    content: >-
+      [GeneratedRegex("(?<property>\\w+)|\\[(?:(?<quote>[\"'])(?<str_idx>.+)\\k<quote>|(?<num_idx>\\d+))\\]", RegexOptions.None, 1000)]
+
+      public static Regex JsonPathTokens()
+    return:
+      type: System.Text.RegularExpressions.Regex
+    content.vb: >-
+      <GeneratedRegex("(?<property>\w+)|\[(?:(?<quote>[""'])(?<str_idx>.+)\k<quote>|(?<num_idx>\d+))\]", RegexOptions.None, 1000)>
+
+      Public Shared Function JsonPathTokens() As Regex
+  overload: MRX.Json.Path.JsonPathMatching.JsonPathTokens*
+  attributes:
+  - type: System.Text.RegularExpressions.GeneratedRegexAttribute
+    ctor: System.Text.RegularExpressions.GeneratedRegexAttribute.#ctor(System.String,System.Text.RegularExpressions.RegexOptions,System.Int32)
+    arguments:
+    - type: System.String
+      value: (?<property>\w+)|\[(?:(?<quote>["'])(?<str_idx>.+)\k<quote>|(?<num_idx>\d+))\]
+    - type: System.Text.RegularExpressions.RegexOptions
+      value: 0
+    - type: System.Int32
+      value: 1000
+references:
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MRX.Json.Path.JsonPathMatching.JsonPathKeys*
+  commentId: Overload:MRX.Json.Path.JsonPathMatching.JsonPathKeys
+  href: MRX.Json.Path.JsonPathMatching.html#MRX_Json_Path_JsonPathMatching_JsonPathKeys
+  name: JsonPathKeys
+  nameWithType: JsonPathMatching.JsonPathKeys
+  fullName: MRX.Json.Path.JsonPathMatching.JsonPathKeys
+- uid: System.Text.RegularExpressions.Regex
+  commentId: T:System.Text.RegularExpressions.Regex
+  parent: System.Text.RegularExpressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.text.regularexpressions.regex
+  name: Regex
+  nameWithType: Regex
+  fullName: System.Text.RegularExpressions.Regex
+- uid: System.Text.RegularExpressions
+  commentId: N:System.Text.RegularExpressions
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Text.RegularExpressions
+  nameWithType: System.Text.RegularExpressions
+  fullName: System.Text.RegularExpressions
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.RegularExpressions
+    name: RegularExpressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.regularexpressions
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Text
+    name: Text
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text
+  - name: .
+  - uid: System.Text.RegularExpressions
+    name: RegularExpressions
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.text.regularexpressions
+- uid: MRX.Json.Path.JsonPathMatching.JsonPathTokens*
+  commentId: Overload:MRX.Json.Path.JsonPathMatching.JsonPathTokens
+  href: MRX.Json.Path.JsonPathMatching.html#MRX_Json_Path_JsonPathMatching_JsonPathTokens
+  name: JsonPathTokens
+  nameWithType: JsonPathMatching.JsonPathTokens
+  fullName: MRX.Json.Path.JsonPathMatching.JsonPathTokens

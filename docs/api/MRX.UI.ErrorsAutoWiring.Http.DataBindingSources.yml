@@ -1,0 +1,787 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  id: DataBindingSources
+  parent: MRX.UI.ErrorsAutoWiring.Http
+  children:
+  - MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  - MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator
+  - MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  - MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError
+  langs:
+  - csharp
+  - vb
+  name: DataBindingSources
+  nameWithType: DataBindingSources
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  type: Class
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: DataBindingSources
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+    startLine: 7
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http
+  summary: Holds the model binding sources (body and query) attached to an <xref href="Microsoft.AspNetCore.Components.Forms.EditContext" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public class DataBindingSources : IEnumerable<object?>, IEnumerable'
+    content.vb: Public Class DataBindingSources Implements IEnumerable(Of Object), IEnumerable
+  inheritance:
+  - System.Object
+  implements:
+  - System.Collections.Generic.IEnumerable{System.Object}
+  - System.Collections.IEnumerable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError
+  id: RootError
+  parent: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  langs:
+  - csharp
+  - vb
+  name: RootError
+  nameWithType: DataBindingSources.RootError
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError
+  type: Property
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: RootError
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+    startLine: 12
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http
+  summary: This property holds an error that is not assignable to any more specific parameter.
+  example: []
+  syntax:
+    content: public string? RootError { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RootError As String
+  overload: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError*
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  id: Body
+  parent: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  langs:
+  - csharp
+  - vb
+  name: Body
+  nameWithType: DataBindingSources.Body
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  type: Property
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Body
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+    startLine: 17
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http
+  summary: The model bound from the request body.
+  example: []
+  syntax:
+    content: public object? Body { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property Body As Object
+  overload: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body*
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  id: Query
+  parent: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: DataBindingSources.Query
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  type: Property
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Query
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+    startLine: 22
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http
+  summary: The model bound from the request query string.
+  example: []
+  syntax:
+    content: public object? Query { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property Query As Object
+  overload: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query*
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator
+  commentId: M:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator
+  id: GetEnumerator
+  parent: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator()
+  nameWithType: DataBindingSources.GetEnumerator()
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator()
+  type: Method
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: GetEnumerator
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/DataBindingSources.cs
+    startLine: 28
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http
+  summary: Enumerates the binding sources, i.e. <xref href="MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body" data-throw-if-not-resolved="false"></xref> followed by <xref href="MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public IEnumerator<object?> GetEnumerator()
+    return:
+      type: System.Collections.Generic.IEnumerator{System.Object}
+      description: An enumerator over the binding sources.
+    content.vb: Public Function GetEnumerator() As IEnumerator(Of Object)
+  overload: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator*
+  implements:
+  - System.Collections.Generic.IEnumerable{System.Object}.GetEnumerator
+references:
+- uid: Microsoft.AspNetCore.Components.Forms.EditContext
+  commentId: T:Microsoft.AspNetCore.Components.Forms.EditContext
+  parent: Microsoft.AspNetCore.Components.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms.editcontext
+  name: EditContext
+  nameWithType: EditContext
+  fullName: Microsoft.AspNetCore.Components.Forms.EditContext
+- uid: MRX.UI.ErrorsAutoWiring.Http
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http
+  name: MRX.UI.ErrorsAutoWiring.Http
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http
+  fullName: MRX.UI.ErrorsAutoWiring.Http
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Collections.Generic.IEnumerable{System.Object}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<object>
+  nameWithType: IEnumerable<object>
+  fullName: System.Collections.Generic.IEnumerable<object>
+  nameWithType.vb: IEnumerable(Of Object)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Object)
+  name.vb: IEnumerable(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.IEnumerable
+  commentId: T:System.Collections.IEnumerable
+  parent: System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.ienumerable
+  name: IEnumerable
+  nameWithType: IEnumerable
+  fullName: System.Collections.IEnumerable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: Microsoft.AspNetCore.Components.Forms
+  commentId: N:Microsoft.AspNetCore.Components.Forms
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.AspNetCore.Components.Forms
+  nameWithType: Microsoft.AspNetCore.Components.Forms
+  fullName: Microsoft.AspNetCore.Components.Forms
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+  - name: .
+  - uid: Microsoft.AspNetCore.Components.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.AspNetCore
+    name: AspNetCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore
+  - name: .
+  - uid: Microsoft.AspNetCore.Components
+    name: Components
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components
+  - name: .
+  - uid: Microsoft.AspNetCore.Components.Forms
+    name: Forms
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.aspnetcore.components.forms
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections
+  commentId: N:System.Collections
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections
+  nameWithType: System.Collections
+  fullName: System.Collections
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError*
+  commentId: Overload:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html#MRX_UI_ErrorsAutoWiring_Http_DataBindingSources_RootError
+  name: RootError
+  nameWithType: DataBindingSources.RootError
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.RootError
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body*
+  commentId: Overload:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html#MRX_UI_ErrorsAutoWiring_Http_DataBindingSources_Body
+  name: Body
+  nameWithType: DataBindingSources.Body
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query*
+  commentId: Overload:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html#MRX_UI_ErrorsAutoWiring_Http_DataBindingSources_Query
+  name: Query
+  nameWithType: DataBindingSources.Query
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html#MRX_UI_ErrorsAutoWiring_Http_DataBindingSources_Body
+  name: Body
+  nameWithType: DataBindingSources.Body
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Body
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html#MRX_UI_ErrorsAutoWiring_Http_DataBindingSources_Query
+  name: Query
+  nameWithType: DataBindingSources.Query
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.Query
+- uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator*
+  commentId: Overload:MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator
+  href: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.html#MRX_UI_ErrorsAutoWiring_Http_DataBindingSources_GetEnumerator
+  name: GetEnumerator
+  nameWithType: DataBindingSources.GetEnumerator
+  fullName: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources.GetEnumerator
+- uid: System.Collections.Generic.IEnumerable{System.Object}.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable{System.Object}.GetEnumerator
+  parent: System.Collections.Generic.IEnumerable{System.Object}
+  definition: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<object>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<object>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of Object).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Object).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable{System.Object}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable{System.Object}.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator{System.Object}
+  commentId: T:System.Collections.Generic.IEnumerator{System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerator`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<object>
+  nameWithType: IEnumerator<object>
+  fullName: System.Collections.Generic.IEnumerator<object>
+  nameWithType.vb: IEnumerator(Of Object)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of Object)
+  name.vb: IEnumerator(Of Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+  commentId: M:System.Collections.Generic.IEnumerable`1.GetEnumerator
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  name: GetEnumerator()
+  nameWithType: IEnumerable<T>.GetEnumerator()
+  fullName: System.Collections.Generic.IEnumerable<T>.GetEnumerator()
+  nameWithType.vb: IEnumerable(Of T).GetEnumerator()
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T).GetEnumerator()
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1.GetEnumerator
+    name: GetEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1.getenumerator
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerator`1
+  commentId: T:System.Collections.Generic.IEnumerator`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  name: IEnumerator<T>
+  nameWithType: IEnumerator<T>
+  fullName: System.Collections.Generic.IEnumerator<T>
+  nameWithType.vb: IEnumerator(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerator(Of T)
+  name.vb: IEnumerator(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerator`1
+    name: IEnumerator
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerator-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

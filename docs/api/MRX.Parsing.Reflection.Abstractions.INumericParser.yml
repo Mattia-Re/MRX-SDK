@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Parsing.Reflection.Abstractions.INumericParser
+  commentId: T:MRX.Parsing.Reflection.Abstractions.INumericParser
+  id: INumericParser
+  parent: MRX.Parsing.Reflection.Abstractions
+  children:
+  - MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  langs:
+  - csharp
+  - vb
+  name: INumericParser
+  nameWithType: INumericParser
+  fullName: MRX.Parsing.Reflection.Abstractions.INumericParser
+  type: Interface
+  source:
+    remote:
+      path: src/MRX.Parsing/src/MRX.Parsing.Reflection/Abstractions/INumericParser.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: INumericParser
+    path: ../src/MRX.Parsing/src/MRX.Parsing.Reflection/Abstractions/INumericParser.cs
+    startLine: 5
+  assemblies:
+  - MRX.Parsing.Reflection
+  namespace: MRX.Parsing.Reflection.Abstractions
+  summary: Parses string tokens into numeric values of a type determined at runtime.
+  example: []
+  syntax:
+    content: public interface INumericParser
+    content.vb: Public Interface INumericParser
+  derivedClasses:
+  - MRX.Parsing.Reflection.NumericParser
+- uid: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  commentId: M:MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  id: Parse(System.Type,System.String,System.IFormatProvider)
+  parent: MRX.Parsing.Reflection.Abstractions.INumericParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(Type, string, IFormatProvider?)
+  nameWithType: INumericParser.Parse(Type, string, IFormatProvider?)
+  fullName: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type, string, System.IFormatProvider?)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Parsing/src/MRX.Parsing.Reflection/Abstractions/INumericParser.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Parse
+    path: ../src/MRX.Parsing/src/MRX.Parsing.Reflection/Abstractions/INumericParser.cs
+    startLine: 14
+  assemblies:
+  - MRX.Parsing.Reflection
+  namespace: MRX.Parsing.Reflection.Abstractions
+  summary: Parses <code class="paramref">token</code> into a value of the specified numeric type.
+  example: []
+  syntax:
+    content: object Parse(Type numericType, string token, IFormatProvider? provider = null)
+    parameters:
+    - id: numericType
+      type: System.Type
+      description: The numeric type to parse the token into. Must implement <xref href="System.Numerics.INumber%601" data-throw-if-not-resolved="false"></xref>.
+    - id: token
+      type: System.String
+      description: The string representation of the value to parse.
+    - id: provider
+      type: System.IFormatProvider
+      description: An optional format provider used to interpret <code class="paramref">token</code>.
+    return:
+      type: System.Object
+      description: The parsed value, boxed as <xref href="System.Object" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function Parse(numericType As Type, token As String, provider As IFormatProvider = Nothing) As Object
+  overload: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse*
+  nameWithType.vb: INumericParser.Parse(Type, String, IFormatProvider)
+  fullName.vb: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type, String, System.IFormatProvider)
+  name.vb: Parse(Type, String, IFormatProvider)
+references:
+- uid: MRX.Parsing.Reflection.Abstractions
+  commentId: N:MRX.Parsing.Reflection.Abstractions
+  name: MRX.Parsing.Reflection.Abstractions
+  nameWithType: MRX.Parsing.Reflection.Abstractions
+  fullName: MRX.Parsing.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+- uid: System.Numerics.INumber`1
+  commentId: T:System.Numerics.INumber`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<TSelf>
+  nameWithType: INumber<TSelf>
+  fullName: System.Numerics.INumber<TSelf>
+  nameWithType.vb: INumber(Of TSelf)
+  fullName.vb: System.Numerics.INumber(Of TSelf)
+  name.vb: INumber(Of TSelf)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse*
+  commentId: Overload:MRX.Parsing.Reflection.Abstractions.INumericParser.Parse
+  href: MRX.Parsing.Reflection.Abstractions.INumericParser.html#MRX_Parsing_Reflection_Abstractions_INumericParser_Parse_System_Type_System_String_System_IFormatProvider_
+  name: Parse
+  nameWithType: INumericParser.Parse
+  fullName: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

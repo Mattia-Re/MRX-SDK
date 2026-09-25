@@ -1,0 +1,54 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.{md,yml}"
+        ],
+        "exclude": [
+          "_site/**"
+        ],
+        "src": "."
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**",
+          ".nojekyll"
+        ],
+        "src": "."
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default",
+      "modern"
+    ],
+    "globalMetadata": {
+      "_appName": "MRX SDK",
+      "_appTitle": "MRX SDK",
+      "_enableSearch": true,
+      "pdf": false
+    }
+  },
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**/*.csproj"
+          ],
+          "exclude": [
+            "test/**",
+            "**/test/**"
+          ],
+          "src": "../src"
+        }
+      ],
+      "dest": "api",
+      "namespaceLayout": "nested"
+    }
+  ]
+}

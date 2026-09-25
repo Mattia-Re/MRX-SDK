@@ -20,7 +20,7 @@ internal class ModelKeyPathVisitor(
         accessorProvider ?? throw new ArgumentNullException(nameof(accessorProvider));
 
     /// <summary>
-    ///     Scans the model for fields referenced by keys.
+    ///     Scans <paramref name="model"/> for fields referenced by <paramref name="keys"/>.
     /// </summary>
     /// <param name="model">The model to scan for the keys</param>
     /// <param name="keys">All field keys to scan for</param>
@@ -33,6 +33,13 @@ internal class ModelKeyPathVisitor(
         return VisitModel(typeof(T), model, keys);
     }
 
+    /// <summary>
+    ///     Scans <paramref name="model"/> for fields referenced by <paramref name="keys"/>.
+    /// </summary>
+    /// <param name="modelType">The runtime type of <paramref name="model"/>.</param>
+    /// <param name="model">The model to scan for the keys</param>
+    /// <param name="keys">All field keys to scan for</param>
+    /// <returns>A dictionary linking each key to the corresponding field.</returns>
     public Dictionary<string, FieldIdentifier> VisitModel(Type modelType, object model, IEnumerable<string> keys)
     {
         ArgumentNullException.ThrowIfNull(modelType);

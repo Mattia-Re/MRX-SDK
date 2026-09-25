@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core
+  commentId: N:MRX.Core
+  id: Core
+  parent: MRX
+  children:
+  - MRX.Core.Common
+  - MRX.Core.Configuration
+  - MRX.Core.Features
+  - MRX.Core.ModelBinding
+  - MRX.Core.ProblemDetailsExtensions
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core
+  nameWithType: MRX.Core
+  fullName: MRX.Core
+  type: Namespace
+  assemblies:
+  - MRX.Core
+references:
+- uid: MRX.Core.Common
+  isExternal: true
+- uid: MRX.Core.Configuration
+  commentId: N:MRX.Core.Configuration
+  name: MRX.Core.Configuration
+  nameWithType: MRX.Core.Configuration
+  fullName: MRX.Core.Configuration
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Configuration
+    name: Configuration
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Configuration
+    name: Configuration
+- uid: MRX.Core.Features
+  commentId: N:MRX.Core.Features
+  name: MRX.Core.Features
+  nameWithType: MRX.Core.Features
+  fullName: MRX.Core.Features
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Features
+    name: Features
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Features
+    name: Features
+- uid: MRX.Core.ModelBinding
+  commentId: N:MRX.Core.ModelBinding
+  name: MRX.Core.ModelBinding
+  nameWithType: MRX.Core.ModelBinding
+  fullName: MRX.Core.ModelBinding
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.ModelBinding
+    name: ModelBinding
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.ModelBinding
+    name: ModelBinding
+- uid: MRX.Core.ProblemDetailsExtensions
+  commentId: T:MRX.Core.ProblemDetailsExtensions
+  href: MRX.Core.ProblemDetailsExtensions.html
+  name: ProblemDetailsExtensions
+  nameWithType: ProblemDetailsExtensions
+  fullName: MRX.Core.ProblemDetailsExtensions

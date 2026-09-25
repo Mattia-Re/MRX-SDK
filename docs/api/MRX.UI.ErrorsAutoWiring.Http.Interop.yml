@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http.Interop
+  id: Interop
+  parent: MRX.UI.ErrorsAutoWiring.Http
+  children:
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  langs:
+  - csharp
+  - vb
+  name: MRX.UI.ErrorsAutoWiring.Http.Interop
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http.Interop
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop
+  type: Namespace
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+references:
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.html
+  name: HttpCodedErrorsProblemDetailsException
+  nameWithType: HttpCodedErrorsProblemDetailsException
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html
+  name: HttpProblemDetailsException
+  nameWithType: HttpProblemDetailsException
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http.Interop
+  name: MRX.UI.ErrorsAutoWiring.Http.Interop
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http.Interop
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+    name: Interop
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+    name: Interop

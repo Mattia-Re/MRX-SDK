@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.Common.ModelBinding
+  commentId: N:MRX.Core.Common.ModelBinding
+  id: ModelBinding
+  parent: MRX.Core.Common
+  children:
+  - MRX.Core.Common.ModelBinding.CodedError
+  langs:
+  - csharp
+  - vb
+  name: MRX.Core.Common.ModelBinding
+  nameWithType: MRX.Core.Common.ModelBinding
+  fullName: MRX.Core.Common.ModelBinding
+  type: Namespace
+  assemblies:
+  - MRX.Core.Common
+references:
+- uid: MRX.Core.Common.ModelBinding.CodedError
+  commentId: T:MRX.Core.Common.ModelBinding.CodedError
+  href: MRX.Core.Common.ModelBinding.CodedError.html
+  name: CodedError
+  nameWithType: CodedError
+  fullName: MRX.Core.Common.ModelBinding.CodedError

@@ -12,8 +12,12 @@ namespace MRX.FeatureDiscovery.RouteProbing;
 /// </summary>
 public class RouteProbe(EndpointDataSource endpointDataSource)
 {
+    /// <summary>
+    /// Lazily-initialized cache of all discovered application routes, populated on first access by
+    /// <see cref="LazyLoadRoutes"/>.
+    /// </summary>
     public Lazy<List<MatchedRoute>> MatchedRoutesCache { get; } = new(() => []);
-    
+
     /// <summary>
     /// Discovers all application routes and caches them.
     /// </summary>
@@ -56,6 +60,13 @@ public class RouteProbe(EndpointDataSource endpointDataSource)
         return routes;
     }
     
+    /// <summary>
+    /// Finds the endpoint whose route template matches <paramref name="path"/> and that supports
+    /// <paramref name="method"/>.
+    /// </summary>
+    /// <param name="path">The request path to match against known routes.</param>
+    /// <param name="method">The HTTP method the endpoint must support.</param>
+    /// <returns>The matching <see cref="RouteEndpoint"/>, or <see langword="null"/> if none is found.</returns>
     internal RouteEndpoint? GetGenericRouteEndpoint(string path, string method)
     {
         RouteValueDictionary routeValues = new();

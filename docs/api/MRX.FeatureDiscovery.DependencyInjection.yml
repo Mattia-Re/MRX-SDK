@@ -1,0 +1,24 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.FeatureDiscovery.DependencyInjection
+  commentId: N:MRX.FeatureDiscovery.DependencyInjection
+  id: DependencyInjection
+  parent: MRX.FeatureDiscovery
+  children:
+  - MRX.FeatureDiscovery.DependencyInjection.FeatureDiscoveryExtensions
+  langs:
+  - csharp
+  - vb
+  name: MRX.FeatureDiscovery.DependencyInjection
+  nameWithType: MRX.FeatureDiscovery.DependencyInjection
+  fullName: MRX.FeatureDiscovery.DependencyInjection
+  type: Namespace
+  assemblies:
+  - MRX.FeatureDiscovery
+references:
+- uid: MRX.FeatureDiscovery.DependencyInjection.FeatureDiscoveryExtensions
+  commentId: T:MRX.FeatureDiscovery.DependencyInjection.FeatureDiscoveryExtensions
+  href: MRX.FeatureDiscovery.DependencyInjection.FeatureDiscoveryExtensions.html
+  name: FeatureDiscoveryExtensions
+  nameWithType: FeatureDiscoveryExtensions
+  fullName: MRX.FeatureDiscovery.DependencyInjection.FeatureDiscoveryExtensions

@@ -9,10 +9,18 @@ using MRX.Parsing.Reflection.Abstractions;
 
 namespace MRX.Json.Reflection.DependencyInjection;
 
+/// <summary>
+/// Provides extension methods for registering MRX JSON reflection services with an <see cref="IServiceCollection"/>.
+/// </summary>
 public static class JsonReflectionServiceCollectionExtensions
 {
     extension(IServiceCollection services)
     {
+        /// <summary>
+        /// Registers the JSON path walking and model reflection services (path walker factory, numeric parser,
+        /// model node accessors, and accessor provider) required to resolve JSON paths against model instances.
+        /// </summary>
+        /// <returns>The same <see cref="IServiceCollection"/> instance, for chaining.</returns>
         public IServiceCollection AddMrxJsonReflection()
         {
             services.TryAddTransient<IJsonPathWalkerFactory, JsonPathWalkerFactory>();

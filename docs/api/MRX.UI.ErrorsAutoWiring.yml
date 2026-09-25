@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring
+  id: UI.ErrorsAutoWiring
+  parent: MRX
+  children:
+  - MRX.UI.ErrorsAutoWiring.Abstractions
+  - MRX.UI.ErrorsAutoWiring.DependencyInjection
+  - MRX.UI.ErrorsAutoWiring.Http
+  - MRX.UI.ErrorsAutoWiring.Wiring
+  langs:
+  - csharp
+  - vb
+  name: MRX.UI.ErrorsAutoWiring
+  type: Namespace
+references:
+- uid: MRX.UI.ErrorsAutoWiring.Abstractions
+  commentId: N:MRX.UI.ErrorsAutoWiring.Abstractions
+  name: MRX.UI.ErrorsAutoWiring.Abstractions
+  nameWithType: MRX.UI.ErrorsAutoWiring.Abstractions
+  fullName: MRX.UI.ErrorsAutoWiring.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+    name: Abstractions
+- uid: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  commentId: N:MRX.UI.ErrorsAutoWiring.DependencyInjection
+  name: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  nameWithType: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  fullName: MRX.UI.ErrorsAutoWiring.DependencyInjection
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.DependencyInjection
+    name: DependencyInjection
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.DependencyInjection
+    name: DependencyInjection
+- uid: MRX.UI.ErrorsAutoWiring.Http
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http
+  name: MRX.UI.ErrorsAutoWiring.Http
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http
+  fullName: MRX.UI.ErrorsAutoWiring.Http
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+- uid: MRX.UI.ErrorsAutoWiring.Wiring
+  commentId: N:MRX.UI.ErrorsAutoWiring.Wiring
+  name: MRX.UI.ErrorsAutoWiring.Wiring
+  nameWithType: MRX.UI.ErrorsAutoWiring.Wiring
+  fullName: MRX.UI.ErrorsAutoWiring.Wiring
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Wiring
+    name: Wiring
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Wiring
+    name: Wiring

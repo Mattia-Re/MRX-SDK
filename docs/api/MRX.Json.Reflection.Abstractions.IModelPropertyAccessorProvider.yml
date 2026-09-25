@@ -1,0 +1,177 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  id: IModelPropertyAccessorProvider
+  parent: MRX.Json.Reflection.Abstractions
+  children:
+  - MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: IModelPropertyAccessorProvider
+  nameWithType: IModelPropertyAccessorProvider
+  fullName: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  type: Interface
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelPropertyAccessorProvider.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: IModelPropertyAccessorProvider
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelPropertyAccessorProvider.cs
+    startLine: 7
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Selects the <xref href="MRX.Json.Reflection.Abstractions.IModelNodeAccessor" data-throw-if-not-resolved="false"></xref> capable of resolving a given JSON path token.
+  example: []
+  syntax:
+    content: public interface IModelPropertyAccessorProvider
+    content.vb: Public Interface IModelPropertyAccessorProvider
+- uid: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  commentId: M:MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  id: GetAccessor(MRX.Json.Path.JsonPathTokenType,System.String,System.Object)
+  parent: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  langs:
+  - csharp
+  - vb
+  name: GetAccessor(JsonPathTokenType, string, object)
+  nameWithType: IModelPropertyAccessorProvider.GetAccessor(JsonPathTokenType, string, object)
+  fullName: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor(MRX.Json.Path.JsonPathTokenType, string, object)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Json.Reflection/Abstractions/IModelPropertyAccessorProvider.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: GetAccessor
+    path: ../src/MRX.Json.Reflection/Abstractions/IModelPropertyAccessorProvider.cs
+    startLine: 16
+  assemblies:
+  - MRX.Json.Reflection
+  namespace: MRX.Json.Reflection.Abstractions
+  summary: Finds an accessor able to resolve <code class="paramref">token</code> against <code class="paramref">container</code>.
+  example: []
+  syntax:
+    content: IModelNodeAccessor? GetAccessor(JsonPathTokenType tokenType, string token, object container)
+    parameters:
+    - id: tokenType
+      type: MRX.Json.Path.JsonPathTokenType
+      description: The kind of path token being resolved (property, array index, etc.).
+    - id: token
+      type: System.String
+      description: The raw token text extracted from the JSON path.
+    - id: container
+      type: System.Object
+      description: The object instance the token should be resolved against.
+    return:
+      type: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+      description: The matching <xref href="MRX.Json.Reflection.Abstractions.IModelNodeAccessor" data-throw-if-not-resolved="false"></xref>, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if none can handle it.
+    content.vb: Function GetAccessor(tokenType As JsonPathTokenType, token As String, container As Object) As IModelNodeAccessor
+  overload: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor*
+  nameWithType.vb: IModelPropertyAccessorProvider.GetAccessor(JsonPathTokenType, String, Object)
+  fullName.vb: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor(MRX.Json.Path.JsonPathTokenType, String, Object)
+  name.vb: GetAccessor(JsonPathTokenType, String, Object)
+references:
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  parent: MRX.Json.Reflection.Abstractions
+  href: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.html
+  name: IModelNodeAccessor
+  nameWithType: IModelNodeAccessor
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+- uid: MRX.Json.Reflection.Abstractions
+  commentId: N:MRX.Json.Reflection.Abstractions
+  name: MRX.Json.Reflection.Abstractions
+  nameWithType: MRX.Json.Reflection.Abstractions
+  fullName: MRX.Json.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+- uid: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor*
+  commentId: Overload:MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor
+  href: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.html#MRX_Json_Reflection_Abstractions_IModelPropertyAccessorProvider_GetAccessor_MRX_Json_Path_JsonPathTokenType_System_String_System_Object_
+  name: GetAccessor
+  nameWithType: IModelPropertyAccessorProvider.GetAccessor
+  fullName: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.GetAccessor
+- uid: MRX.Json.Path.JsonPathTokenType
+  commentId: T:MRX.Json.Path.JsonPathTokenType
+  parent: MRX.Json.Path
+  href: MRX.Json.Path.JsonPathTokenType.html
+  name: JsonPathTokenType
+  nameWithType: JsonPathTokenType
+  fullName: MRX.Json.Path.JsonPathTokenType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: MRX.Json.Path
+  commentId: N:MRX.Json.Path
+  name: MRX.Json.Path
+  nameWithType: MRX.Json.Path
+  fullName: MRX.Json.Path
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Path
+    name: Path
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

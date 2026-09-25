@@ -1,0 +1,216 @@
+### YamlMime:TableOfContent
+items:
+- uid: MRX
+  name: MRX
+  type: Namespace
+  items:
+  - uid: MRX.Core
+    name: Core
+    type: Namespace
+    items:
+    - uid: MRX.Core.Common
+      name: Common
+      type: Namespace
+      items:
+      - uid: MRX.Core.Common.Features
+        name: Features
+        type: Namespace
+        items:
+        - uid: MRX.Core.Common.Features.MrxEndpointFeatures
+          name: MrxEndpointFeatures
+          type: Class
+      - uid: MRX.Core.Common.ModelBinding
+        name: ModelBinding
+        type: Namespace
+        items:
+        - uid: MRX.Core.Common.ModelBinding.CodedError
+          name: CodedError
+          type: Class
+    - uid: MRX.Core.Configuration
+      name: Configuration
+      type: Namespace
+      items:
+      - uid: MRX.Core.Configuration.MrxConfigurationOptions
+        name: MrxConfigurationOptions
+        type: Class
+      - uid: MRX.Core.Configuration.ServiceCollectionExtensions
+        name: ServiceCollectionExtensions
+        type: Class
+    - uid: MRX.Core.Features
+      name: Features
+      type: Namespace
+      items:
+      - uid: MRX.Core.Features.IFeatureDescriptor
+        name: IFeatureDescriptor
+        type: Interface
+    - uid: MRX.Core.ModelBinding
+      name: ModelBinding
+      type: Namespace
+      items:
+      - uid: MRX.Core.ModelBinding.Attributes
+        name: Attributes
+        type: Namespace
+        items:
+        - uid: MRX.Core.ModelBinding.Attributes.DisambiguateAttribute
+          name: DisambiguateAttribute
+          type: Class
+      - uid: MRX.Core.ModelBinding.ModelBindingConfigurationExtensions
+        name: ModelBindingConfigurationExtensions
+        type: Class
+      - uid: MRX.Core.ModelBinding.ModelBindingOptions
+        name: ModelBindingOptions
+        type: Class
+    - uid: MRX.Core.ProblemDetailsExtensions
+      name: ProblemDetailsExtensions
+      type: Class
+  - uid: MRX.FeatureDiscovery
+    name: FeatureDiscovery
+    type: Namespace
+    items:
+    - uid: MRX.FeatureDiscovery.Common
+      name: Common
+      type: Namespace
+      items:
+      - uid: MRX.FeatureDiscovery.Common.FeatureDiscoveryResponse
+        name: FeatureDiscoveryResponse
+        type: Class
+    - uid: MRX.FeatureDiscovery.Controllers
+      name: Controllers
+      type: Namespace
+      items:
+      - uid: MRX.FeatureDiscovery.Controllers.FeatureDiscoveryController
+        name: FeatureDiscoveryController
+        type: Class
+    - uid: MRX.FeatureDiscovery.DependencyInjection
+      name: DependencyInjection
+      type: Namespace
+      items:
+      - uid: MRX.FeatureDiscovery.DependencyInjection.FeatureDiscoveryExtensions
+        name: FeatureDiscoveryExtensions
+        type: Class
+    - uid: MRX.FeatureDiscovery.RouteProbing
+      name: RouteProbing
+      type: Namespace
+      items:
+      - uid: MRX.FeatureDiscovery.RouteProbing.MatchedRoute
+        name: MatchedRoute
+        type: Class
+      - uid: MRX.FeatureDiscovery.RouteProbing.RouteProbe
+        name: RouteProbe
+        type: Class
+  - uid: MRX.Json
+    name: Json
+    type: Namespace
+    items:
+    - uid: MRX.Json.Path
+      name: Path
+      type: Namespace
+      items:
+      - uid: MRX.Json.Path.JsonPathMatching
+        name: JsonPathMatching
+        type: Class
+      - uid: MRX.Json.Path.JsonPathToken
+        name: JsonPathToken
+        type: Struct
+      - uid: MRX.Json.Path.JsonPathTokenType
+        name: JsonPathTokenType
+        type: Enum
+      - uid: MRX.Json.Path.JsonPathWalker
+        name: JsonPathWalker
+        type: Class
+    - uid: MRX.Json.Reflection
+      name: Reflection
+      type: Namespace
+      items:
+      - uid: MRX.Json.Reflection.Abstractions
+        name: Abstractions
+        type: Namespace
+        items:
+        - uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+          name: IModelNodeAccessor
+          type: Interface
+        - uid: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+          name: IModelNodeNameAccessor
+          type: Interface
+        - uid: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+          name: IModelPropertyAccessorProvider
+          type: Interface
+      - uid: MRX.Json.Reflection.DependencyInjection
+        name: DependencyInjection
+        type: Namespace
+        items:
+        - uid: MRX.Json.Reflection.DependencyInjection.JsonReflectionServiceCollectionExtensions
+          name: JsonReflectionServiceCollectionExtensions
+          type: Class
+  - uid: MRX.Parsing.Reflection
+    name: Parsing.Reflection
+    type: Namespace
+    items:
+    - uid: MRX.Parsing.Reflection.Abstractions
+      name: Abstractions
+      type: Namespace
+      items:
+      - uid: MRX.Parsing.Reflection.Abstractions.INumericParser
+        name: INumericParser
+        type: Interface
+    - uid: MRX.Parsing.Reflection.NumericParser
+      name: NumericParser
+      type: Class
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: UI.ErrorsAutoWiring
+    type: Namespace
+    items:
+    - uid: MRX.UI.ErrorsAutoWiring.Abstractions
+      name: Abstractions
+      type: Namespace
+      items:
+      - uid: MRX.UI.ErrorsAutoWiring.Abstractions.IErrorMappingFactory
+        name: IErrorMappingFactory
+        type: Interface
+      - uid: MRX.UI.ErrorsAutoWiring.Abstractions.IModelKeyPathVisitor
+        name: IModelKeyPathVisitor
+        type: Interface
+    - uid: MRX.UI.ErrorsAutoWiring.DependencyInjection
+      name: DependencyInjection
+      type: Namespace
+      items:
+      - uid: MRX.UI.ErrorsAutoWiring.DependencyInjection.ErrorsAutoWiringServiceCollectionExtensions
+        name: ErrorsAutoWiringServiceCollectionExtensions
+        type: Class
+      - uid: MRX.UI.ErrorsAutoWiring.DependencyInjection.ProblemDetailsHttpClientOptionsSetup
+        name: ProblemDetailsHttpClientOptionsSetup
+        type: Class
+    - uid: MRX.UI.ErrorsAutoWiring.Http
+      name: Http
+      type: Namespace
+      items:
+      - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+        name: Interop
+        type: Namespace
+        items:
+        - uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+          name: HttpCodedErrorsProblemDetailsException
+          type: Class
+        - uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+          name: HttpProblemDetailsException
+          type: Class
+      - uid: MRX.UI.ErrorsAutoWiring.Http.DataBindingSources
+        name: DataBindingSources
+        type: Class
+      - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClient
+        name: ProblemDetailsHttpClient
+        type: Class
+      - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions
+        name: ProblemDetailsHttpClientOptions
+        type: Class
+      - uid: MRX.UI.ErrorsAutoWiring.Http.ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+        name: ProblemDetailsHttpClientOptions.ErrorMappingFactoryHandler
+        type: Delegate
+    - uid: MRX.UI.ErrorsAutoWiring.Wiring
+      name: Wiring
+      type: Namespace
+      items:
+      - uid: MRX.UI.ErrorsAutoWiring.Wiring.DefaultErrorMappingFactory
+        name: DefaultErrorMappingFactory
+        type: Class
+memberLayout: SamePage

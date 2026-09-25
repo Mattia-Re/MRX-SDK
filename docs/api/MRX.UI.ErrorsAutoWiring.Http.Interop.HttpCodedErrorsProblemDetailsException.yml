@@ -1,0 +1,780 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  id: HttpCodedErrorsProblemDetailsException
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop
+  children:
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors
+  langs:
+  - csharp
+  - vb
+  name: HttpCodedErrorsProblemDetailsException
+  nameWithType: HttpCodedErrorsProblemDetailsException
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  type: Class
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/Interop/HttpCodedErrorsProblemDetailsException.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: HttpCodedErrorsProblemDetailsException
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/Interop/HttpCodedErrorsProblemDetailsException.cs
+    startLine: 8
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http.Interop
+  summary: >-
+    An <xref href="MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException" data-throw-if-not-resolved="false"></xref> whose problem details response included an "errors" extension
+
+    compatible with MRX coded errors.
+  example: []
+  syntax:
+    content: 'public class HttpCodedErrorsProblemDetailsException : HttpProblemDetailsException, ISerializable'
+    content.vb: Public Class HttpCodedErrorsProblemDetailsException Inherits HttpProblemDetailsException Implements ISerializable
+  inheritance:
+  - System.Object
+  - System.Exception
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  implements:
+  - System.Runtime.Serialization.ISerializable
+  inheritedMembers:
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Type
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Status
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Title
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Detail
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Instance
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Extensions
+  - MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,{TValue}@)
+  - System.Exception.GetBaseException
+  - System.Exception.GetType
+  - System.Exception.ToString
+  - System.Exception.Data
+  - System.Exception.HelpLink
+  - System.Exception.HResult
+  - System.Exception.InnerException
+  - System.Exception.Message
+  - System.Exception.Source
+  - System.Exception.StackTrace
+  - System.Exception.TargetSite
+  - System.Exception.SerializeObjectState
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors
+  id: Errors
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: HttpCodedErrorsProblemDetailsException.Errors
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors
+  type: Property
+  source:
+    remote:
+      path: src/MRX.UI.ErrorsAutoWiring/src/Http/Interop/HttpCodedErrorsProblemDetailsException.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Errors
+    path: ../src/MRX.UI.ErrorsAutoWiring/src/Http/Interop/HttpCodedErrorsProblemDetailsException.cs
+    startLine: 13
+  assemblies:
+  - MRX.UI.ErrorsAutoWiring
+  namespace: MRX.UI.ErrorsAutoWiring.Http.Interop
+  summary: The coded errors extracted from the response's "errors" extension, keyed by the server-provided error key.
+  example: []
+  syntax:
+    content: public Dictionary<string, CodedError[]> Errors { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]}
+    content.vb: Public Property Errors As Dictionary(Of String, CodedError())
+  overload: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors*
+references:
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  commentId: T:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html
+  name: HttpProblemDetailsException
+  nameWithType: HttpProblemDetailsException
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+  commentId: N:MRX.UI.ErrorsAutoWiring.Http.Interop
+  name: MRX.UI.ErrorsAutoWiring.Http.Interop
+  nameWithType: MRX.UI.ErrorsAutoWiring.Http.Interop
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+    name: Interop
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.UI
+    name: UI
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring
+    name: ErrorsAutoWiring
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http
+    name: Http
+  - name: .
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop
+    name: Interop
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System.Runtime.Serialization.ISerializable
+  commentId: T:System.Runtime.Serialization.ISerializable
+  parent: System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization.iserializable
+  name: ISerializable
+  nameWithType: ISerializable
+  fullName: System.Runtime.Serialization.ISerializable
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Type
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Type
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_Type
+  name: Type
+  nameWithType: HttpProblemDetailsException.Type
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Type
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Status
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Status
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_Status
+  name: Status
+  nameWithType: HttpProblemDetailsException.Status
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Status
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Title
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Title
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_Title
+  name: Title
+  nameWithType: HttpProblemDetailsException.Title
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Title
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Detail
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Detail
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_Detail
+  name: Detail
+  nameWithType: HttpProblemDetailsException.Detail
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Detail
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Instance
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Instance
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_Instance
+  name: Instance
+  nameWithType: HttpProblemDetailsException.Instance
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Instance
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Extensions
+  commentId: P:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Extensions
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_Extensions
+  name: Extensions
+  nameWithType: HttpProblemDetailsException.Extensions
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.Extensions
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,{TValue}@)
+  commentId: M:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+  parent: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException
+  definition: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_TryGetExtension__1_System_String___0__
+  name: TryGetExtension<TValue>(string, out TValue)
+  nameWithType: HttpProblemDetailsException.TryGetExtension<TValue>(string, out TValue)
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension<TValue>(string, out TValue)
+  nameWithType.vb: HttpProblemDetailsException.TryGetExtension(Of TValue)(String, TValue)
+  fullName.vb: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension(Of TValue)(String, TValue)
+  name.vb: TryGetExtension(Of TValue)(String, TValue)
+  spec.csharp:
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+    name: TryGetExtension
+    href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_TryGetExtension__1_System_String___0__
+  - name: <
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TValue
+  - name: )
+  spec.vb:
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+    name: TryGetExtension
+    href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_TryGetExtension__1_System_String___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Exception.GetBaseException
+  commentId: M:System.Exception.GetBaseException
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  name: GetBaseException()
+  nameWithType: Exception.GetBaseException()
+  fullName: System.Exception.GetBaseException()
+  spec.csharp:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetBaseException
+    name: GetBaseException
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.getbaseexception
+  - name: (
+  - name: )
+- uid: System.Exception.GetType
+  commentId: M:System.Exception.GetType
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  name: GetType()
+  nameWithType: Exception.GetType()
+  fullName: System.Exception.GetType()
+  spec.csharp:
+  - uid: System.Exception.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.gettype
+  - name: (
+  - name: )
+- uid: System.Exception.ToString
+  commentId: M:System.Exception.ToString
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  name: ToString()
+  nameWithType: Exception.ToString()
+  fullName: System.Exception.ToString()
+  spec.csharp:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Exception.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception.tostring
+  - name: (
+  - name: )
+- uid: System.Exception.Data
+  commentId: P:System.Exception.Data
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.data
+  name: Data
+  nameWithType: Exception.Data
+  fullName: System.Exception.Data
+- uid: System.Exception.HelpLink
+  commentId: P:System.Exception.HelpLink
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.helplink
+  name: HelpLink
+  nameWithType: Exception.HelpLink
+  fullName: System.Exception.HelpLink
+- uid: System.Exception.HResult
+  commentId: P:System.Exception.HResult
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.hresult
+  name: HResult
+  nameWithType: Exception.HResult
+  fullName: System.Exception.HResult
+- uid: System.Exception.InnerException
+  commentId: P:System.Exception.InnerException
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.innerexception
+  name: InnerException
+  nameWithType: Exception.InnerException
+  fullName: System.Exception.InnerException
+- uid: System.Exception.Message
+  commentId: P:System.Exception.Message
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.message
+  name: Message
+  nameWithType: Exception.Message
+  fullName: System.Exception.Message
+- uid: System.Exception.Source
+  commentId: P:System.Exception.Source
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.source
+  name: Source
+  nameWithType: Exception.Source
+  fullName: System.Exception.Source
+- uid: System.Exception.StackTrace
+  commentId: P:System.Exception.StackTrace
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.stacktrace
+  name: StackTrace
+  nameWithType: Exception.StackTrace
+  fullName: System.Exception.StackTrace
+- uid: System.Exception.TargetSite
+  commentId: P:System.Exception.TargetSite
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.targetsite
+  name: TargetSite
+  nameWithType: Exception.TargetSite
+  fullName: System.Exception.TargetSite
+- uid: System.Exception.SerializeObjectState
+  commentId: E:System.Exception.SerializeObjectState
+  parent: System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception.serializeobjectstate
+  name: SerializeObjectState
+  nameWithType: Exception.SerializeObjectState
+  fullName: System.Exception.SerializeObjectState
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Runtime.Serialization
+  commentId: N:System.Runtime.Serialization
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Runtime.Serialization
+  nameWithType: System.Runtime.Serialization
+  fullName: System.Runtime.Serialization
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Runtime
+    name: Runtime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime
+  - name: .
+  - uid: System.Runtime.Serialization
+    name: Serialization
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.runtime.serialization
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+  commentId: M:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+  isExternal: true
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_TryGetExtension__1_System_String___0__
+  name: TryGetExtension<TValue>(string, out TValue)
+  nameWithType: HttpProblemDetailsException.TryGetExtension<TValue>(string, out TValue)
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension<TValue>(string, out TValue)
+  nameWithType.vb: HttpProblemDetailsException.TryGetExtension(Of TValue)(String, TValue)
+  fullName.vb: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension(Of TValue)(String, TValue)
+  name.vb: TryGetExtension(Of TValue)(String, TValue)
+  spec.csharp:
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+    name: TryGetExtension
+    href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_TryGetExtension__1_System_String___0__
+  - name: <
+  - name: TValue
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TValue
+  - name: )
+  spec.vb:
+  - uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.TryGetExtension``1(System.String,``0@)
+    name: TryGetExtension
+    href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpProblemDetailsException_TryGetExtension__1_System_String___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TValue
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors*
+  commentId: Overload:MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors
+  href: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.html#MRX_UI_ErrorsAutoWiring_Http_Interop_HttpCodedErrorsProblemDetailsException_Errors
+  name: Errors
+  nameWithType: HttpCodedErrorsProblemDetailsException.Errors
+  fullName: MRX.UI.ErrorsAutoWiring.Http.Interop.HttpCodedErrorsProblemDetailsException.Errors
+- uid: System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,MRX.Core.Common.ModelBinding.CodedError[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, CodedError[]>
+  nameWithType: Dictionary<string, CodedError[]>
+  fullName: System.Collections.Generic.Dictionary<string, MRX.Core.Common.ModelBinding.CodedError[]>
+  nameWithType.vb: Dictionary(Of String, CodedError())
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, MRX.Core.Common.ModelBinding.CodedError())
+  name.vb: Dictionary(Of String, CodedError())
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: MRX.Core.Common.ModelBinding.CodedError
+    name: CodedError
+    href: MRX.Core.Common.ModelBinding.CodedError.html
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: MRX.Core.Common.ModelBinding.CodedError
+    name: CodedError
+    href: MRX.Core.Common.ModelBinding.CodedError.html
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

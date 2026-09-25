@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Core.Features.IFeatureDescriptor
+  commentId: T:MRX.Core.Features.IFeatureDescriptor
+  id: IFeatureDescriptor
+  parent: MRX.Core.Features
+  children:
+  - MRX.Core.Features.IFeatureDescriptor.FeatureName
+  langs:
+  - csharp
+  - vb
+  name: IFeatureDescriptor
+  nameWithType: IFeatureDescriptor
+  fullName: MRX.Core.Features.IFeatureDescriptor
+  type: Interface
+  source:
+    remote:
+      path: src/MRX.Core/src/Features/IFeatureDescriptor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: IFeatureDescriptor
+    path: ../src/MRX.Core/src/Features/IFeatureDescriptor.cs
+    startLine: 5
+  assemblies:
+  - MRX.Core
+  namespace: MRX.Core.Features
+  summary: Describes a named MRX endpoint feature, typically implemented by attributes applied to controllers or actions.
+  example: []
+  syntax:
+    content: public interface IFeatureDescriptor
+    content.vb: Public Interface IFeatureDescriptor
+  derivedClasses:
+  - MRX.Core.ModelBinding.Attributes.DisambiguateAttribute
+- uid: MRX.Core.Features.IFeatureDescriptor.FeatureName
+  commentId: P:MRX.Core.Features.IFeatureDescriptor.FeatureName
+  id: FeatureName
+  parent: MRX.Core.Features.IFeatureDescriptor
+  langs:
+  - csharp
+  - vb
+  name: FeatureName
+  nameWithType: IFeatureDescriptor.FeatureName
+  fullName: MRX.Core.Features.IFeatureDescriptor.FeatureName
+  type: Property
+  source:
+    remote:
+      path: src/MRX.Core/src/Features/IFeatureDescriptor.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: FeatureName
+    path: ../src/MRX.Core/src/Features/IFeatureDescriptor.cs
+    startLine: 10
+  assemblies:
+  - MRX.Core
+  namespace: MRX.Core.Features
+  summary: The name of the feature this descriptor represents.
+  example: []
+  syntax:
+    content: string FeatureName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property FeatureName As String
+  overload: MRX.Core.Features.IFeatureDescriptor.FeatureName*
+references:
+- uid: MRX.Core.Features
+  commentId: N:MRX.Core.Features
+  name: MRX.Core.Features
+  nameWithType: MRX.Core.Features
+  fullName: MRX.Core.Features
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Features
+    name: Features
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Core
+    name: Core
+  - name: .
+  - uid: MRX.Core.Features
+    name: Features
+- uid: MRX.Core.Features.IFeatureDescriptor.FeatureName*
+  commentId: Overload:MRX.Core.Features.IFeatureDescriptor.FeatureName
+  href: MRX.Core.Features.IFeatureDescriptor.html#MRX_Core_Features_IFeatureDescriptor_FeatureName
+  name: FeatureName
+  nameWithType: IFeatureDescriptor.FeatureName
+  fullName: MRX.Core.Features.IFeatureDescriptor.FeatureName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

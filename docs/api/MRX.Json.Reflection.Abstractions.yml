@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Json.Reflection.Abstractions
+  commentId: N:MRX.Json.Reflection.Abstractions
+  id: Abstractions
+  parent: MRX.Json.Reflection
+  children:
+  - MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  - MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  - MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  langs:
+  - csharp
+  - vb
+  name: MRX.Json.Reflection.Abstractions
+  nameWithType: MRX.Json.Reflection.Abstractions
+  fullName: MRX.Json.Reflection.Abstractions
+  type: Namespace
+  assemblies:
+  - MRX.Json.Reflection
+references:
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+  parent: MRX.Json.Reflection.Abstractions
+  href: MRX.Json.Reflection.Abstractions.IModelNodeAccessor.html
+  name: IModelNodeAccessor
+  nameWithType: IModelNodeAccessor
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeAccessor
+- uid: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+  href: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor.html
+  name: IModelNodeNameAccessor
+  nameWithType: IModelNodeNameAccessor
+  fullName: MRX.Json.Reflection.Abstractions.IModelNodeNameAccessor
+- uid: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  commentId: T:MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+  href: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider.html
+  name: IModelPropertyAccessorProvider
+  nameWithType: IModelPropertyAccessorProvider
+  fullName: MRX.Json.Reflection.Abstractions.IModelPropertyAccessorProvider
+- uid: MRX.Json.Reflection.Abstractions
+  commentId: N:MRX.Json.Reflection.Abstractions
+  name: MRX.Json.Reflection.Abstractions
+  nameWithType: MRX.Json.Reflection.Abstractions
+  fullName: MRX.Json.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Json
+    name: Json
+  - name: .
+  - uid: MRX.Json.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Json.Reflection.Abstractions
+    name: Abstractions

@@ -1,0 +1,526 @@
+### YamlMime:ManagedReference
+items:
+- uid: MRX.Parsing.Reflection.NumericParser
+  commentId: T:MRX.Parsing.Reflection.NumericParser
+  id: NumericParser
+  parent: MRX.Parsing.Reflection
+  children:
+  - MRX.Parsing.Reflection.NumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  langs:
+  - csharp
+  - vb
+  name: NumericParser
+  nameWithType: NumericParser
+  fullName: MRX.Parsing.Reflection.NumericParser
+  type: Class
+  source:
+    remote:
+      path: src/MRX.Parsing/src/MRX.Parsing.Reflection/NumericParser.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: NumericParser
+    path: ../src/MRX.Parsing/src/MRX.Parsing.Reflection/NumericParser.cs
+    startLine: 9
+  assemblies:
+  - MRX.Parsing.Reflection
+  namespace: MRX.Parsing.Reflection
+  summary: >-
+    Default <xref href="MRX.Parsing.Reflection.Abstractions.INumericParser" data-throw-if-not-resolved="false"></xref> implementation that parses tokens via reflection over
+
+    types implementing <xref href="System.Numerics.INumber%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public class NumericParser : INumericParser'
+    content.vb: Public Class NumericParser Implements INumericParser
+  inheritance:
+  - System.Object
+  implements:
+  - MRX.Parsing.Reflection.Abstractions.INumericParser
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: MRX.Parsing.Reflection.NumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  commentId: M:MRX.Parsing.Reflection.NumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  id: Parse(System.Type,System.String,System.IFormatProvider)
+  parent: MRX.Parsing.Reflection.NumericParser
+  langs:
+  - csharp
+  - vb
+  name: Parse(Type, string, IFormatProvider?)
+  nameWithType: NumericParser.Parse(Type, string, IFormatProvider?)
+  fullName: MRX.Parsing.Reflection.NumericParser.Parse(System.Type, string, System.IFormatProvider?)
+  type: Method
+  source:
+    remote:
+      path: src/MRX.Parsing/src/MRX.Parsing.Reflection/NumericParser.cs
+      branch: main
+      repo: https://github.com/Mattia-Re/MRX-SDK.git
+    id: Parse
+    path: ../src/MRX.Parsing/src/MRX.Parsing.Reflection/NumericParser.cs
+    startLine: 20
+  assemblies:
+  - MRX.Parsing.Reflection
+  namespace: MRX.Parsing.Reflection
+  summary: Parses <code class="paramref">token</code> into a value of <code class="paramref">numericType</code>.
+  example: []
+  syntax:
+    content: public object Parse(Type numericType, string token, IFormatProvider? provider = null)
+    parameters:
+    - id: numericType
+      type: System.Type
+      description: The numeric type to parse the token into. Must implement <xref href="System.Numerics.INumber%601" data-throw-if-not-resolved="false"></xref>.
+    - id: token
+      type: System.String
+      description: The string representation of the value to parse.
+    - id: provider
+      type: System.IFormatProvider
+      description: An optional format provider used to interpret <code class="paramref">token</code>.
+    return:
+      type: System.Object
+      description: The parsed value, boxed as <xref href="System.Object" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Parse(numericType As Type, token As String, provider As IFormatProvider = Nothing) As Object
+  overload: MRX.Parsing.Reflection.NumericParser.Parse*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: <code class="paramref">numericType</code> or <code class="paramref">token</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: <code class="paramref">numericType</code> does not implement <xref href="System.Numerics.INumber%601" data-throw-if-not-resolved="false"></xref>.
+  implements:
+  - MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  nameWithType.vb: NumericParser.Parse(Type, String, IFormatProvider)
+  fullName.vb: MRX.Parsing.Reflection.NumericParser.Parse(System.Type, String, System.IFormatProvider)
+  name.vb: Parse(Type, String, IFormatProvider)
+references:
+- uid: MRX.Parsing.Reflection.Abstractions.INumericParser
+  commentId: T:MRX.Parsing.Reflection.Abstractions.INumericParser
+  parent: MRX.Parsing.Reflection.Abstractions
+  href: MRX.Parsing.Reflection.Abstractions.INumericParser.html
+  name: INumericParser
+  nameWithType: INumericParser
+  fullName: MRX.Parsing.Reflection.Abstractions.INumericParser
+- uid: System.Numerics.INumber`1
+  commentId: T:System.Numerics.INumber`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  name: INumber<TSelf>
+  nameWithType: INumber<TSelf>
+  fullName: System.Numerics.INumber<TSelf>
+  nameWithType.vb: INumber(Of TSelf)
+  fullName.vb: System.Numerics.INumber(Of TSelf)
+  name.vb: INumber(Of TSelf)
+  spec.csharp:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: <
+  - name: TSelf
+  - name: '>'
+  spec.vb:
+  - uid: System.Numerics.INumber`1
+    name: INumber
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.numerics.inumber-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSelf
+  - name: )
+- uid: MRX.Parsing.Reflection
+  commentId: N:MRX.Parsing.Reflection
+  name: MRX.Parsing.Reflection
+  nameWithType: MRX.Parsing.Reflection
+  fullName: MRX.Parsing.Reflection
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: MRX.Parsing.Reflection.Abstractions
+  commentId: N:MRX.Parsing.Reflection.Abstractions
+  name: MRX.Parsing.Reflection.Abstractions
+  nameWithType: MRX.Parsing.Reflection.Abstractions
+  fullName: MRX.Parsing.Reflection.Abstractions
+  spec.csharp:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+  spec.vb:
+  - uid: MRX
+    name: MRX
+  - name: .
+  - uid: MRX.Parsing
+    name: Parsing
+  - name: .
+  - uid: MRX.Parsing.Reflection
+    name: Reflection
+  - name: .
+  - uid: MRX.Parsing.Reflection.Abstractions
+    name: Abstractions
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: MRX.Parsing.Reflection.NumericParser.Parse*
+  commentId: Overload:MRX.Parsing.Reflection.NumericParser.Parse
+  href: MRX.Parsing.Reflection.NumericParser.html#MRX_Parsing_Reflection_NumericParser_Parse_System_Type_System_String_System_IFormatProvider_
+  name: Parse
+  nameWithType: NumericParser.Parse
+  fullName: MRX.Parsing.Reflection.NumericParser.Parse
+- uid: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  commentId: M:MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+  parent: MRX.Parsing.Reflection.Abstractions.INumericParser
+  isExternal: true
+  href: MRX.Parsing.Reflection.Abstractions.INumericParser.html#MRX_Parsing_Reflection_Abstractions_INumericParser_Parse_System_Type_System_String_System_IFormatProvider_
+  name: Parse(Type, string, IFormatProvider)
+  nameWithType: INumericParser.Parse(Type, string, IFormatProvider)
+  fullName: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type, string, System.IFormatProvider)
+  nameWithType.vb: INumericParser.Parse(Type, String, IFormatProvider)
+  fullName.vb: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type, String, System.IFormatProvider)
+  name.vb: Parse(Type, String, IFormatProvider)
+  spec.csharp:
+  - uid: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+    name: Parse
+    href: MRX.Parsing.Reflection.Abstractions.INumericParser.html#MRX_Parsing_Reflection_Abstractions_INumericParser_Parse_System_Type_System_String_System_IFormatProvider_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+  spec.vb:
+  - uid: MRX.Parsing.Reflection.Abstractions.INumericParser.Parse(System.Type,System.String,System.IFormatProvider)
+    name: Parse
+    href: MRX.Parsing.Reflection.Abstractions.INumericParser.html#MRX_Parsing_Reflection_Abstractions_INumericParser_Parse_System_Type_System_String_System_IFormatProvider_
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.IFormatProvider
+    name: IFormatProvider
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  - name: )
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.IFormatProvider
+  commentId: T:System.IFormatProvider
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iformatprovider
+  name: IFormatProvider
+  nameWithType: IFormatProvider
+  fullName: System.IFormatProvider

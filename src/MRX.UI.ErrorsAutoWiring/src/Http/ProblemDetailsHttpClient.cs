@@ -6,6 +6,12 @@ using MRX.UI.ErrorsAutoWiring.Http.Interop;
 
 namespace MRX.UI.ErrorsAutoWiring.Http;
 
+/// <summary>
+/// An HTTP client that sends requests and maps any RFC 7807 problem details error response onto the validation
+/// messages of an <see cref="EditContext"/>.
+/// </summary>
+/// <param name="httpClient">The underlying HTTP client used to send requests.</param>
+/// <param name="options">The options controlling how errors are mapped to fields.</param>
 public class ProblemDetailsHttpClient(HttpClient httpClient, IOptions<ProblemDetailsHttpClientOptions> options)
 {
     private readonly ProblemDetailsHttpClientOptions _options = options.Value;
@@ -15,6 +21,15 @@ public class ProblemDetailsHttpClient(HttpClient httpClient, IOptions<ProblemDet
         PropertyNameCaseInsensitive = true
     };
 
+    /// <summary>
+    /// Sends an HTTP request and, if the response is a problem details error, maps its errors onto
+    /// <paramref name="editContext"/>'s validation message store.
+    /// </summary>
+    /// <param name="editContext">The edit context whose model must be a <see cref="DataBindingSources"/> instance.</param>
+    /// <param name="request">The HTTP request to send.</param>
+    /// <param name="cancellationToken">A token used to cancel the operation.</param>
+    /// <returns>The HTTP response returned by the underlying client.</returns>
+    /// <exception cref="InvalidOperationException">Thrown when <paramref name="editContext"/>'s model is not a <see cref="DataBindingSources"/>.</exception>
     public async Task<HttpResponseMessage> SendContextAwareAsync(EditContext editContext, HttpRequestMessage request,
         CancellationToken cancellationToken)
     {
@@ -70,6 +85,13 @@ public class ProblemDetailsHttpClient(HttpClient httpClient, IOptions<ProblemDet
         }
     }
 
+    /// <summary>
+    /// Ensures <paramref name="response"/> was successful, throwing an <see cref="HttpProblemDetailsException"/> (or the more
+    /// specific <see cref="HttpCodedErrorsProblemDetailsException"/>) built from the response body otherwise.
+    /// </summary>
+    /// <param name="response">The HTTP response to check.</param>
+    /// <param name="cancellationToken">A token used to cancel the operation.</param>
+    /// <exception cref="HttpProblemDetailsException">Thrown when the response is not successful.</exception>
     private static async Task HandleProblemAsync(HttpResponseMessage response, CancellationToken cancellationToken)
     {
         try
