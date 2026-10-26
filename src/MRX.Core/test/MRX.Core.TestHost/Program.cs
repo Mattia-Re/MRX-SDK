@@ -1,5 +1,6 @@
 using System.Text.Json;
 using MRX.Core.DependencyInjection;
+using MRX.Core.Routing;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +12,13 @@ builder.Services.AddMrxModelBindingValidation(options =>
     };
 });
 
+builder.Services.AddExecutionPipelineRecording();
+
 WebApplication app = builder.Build();
 
 app.UseHttpsRedirection();
+
+app.UseExecutionPipelineRecording();
 
 app.MapControllers();
 

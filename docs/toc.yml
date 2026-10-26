@@ -12,6 +12,8 @@
       href: concepts/root-level-errors.md
     - name: Model Node Accessors
       href: concepts/model-node-accessors.md
+    - name: Internal Rewrites
+      href: concepts/routing.md
 - name: Performance
   href: performance.md
 - name: API Reference
